@@ -1,0 +1,131 @@
+- !<AssetImportMetadata/98cd0d84-5054-4c72-839a-9d4a4e49f1e2>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 28cb8ba7-a310-4af8-9afd-5a8d24102352
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 28cb8ba7-a310-4af8-9afd-5a8d24102352
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> fe55113e-6114-431e-bc7b-ad35e167f832
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/fe55113e-6114-431e-bc7b-ad35e167f832>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 8dbb6124-ce11-41d2-bd10-499875295934
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoConfirmAfter: false
+    ceilingGuard: false
+    designSize: false
+    deviceTracking: false
+    fallbackAfter: false
+    fallbackDistance: false
+    fallbackDrop: false
+    floorRoot: false
+    floorSize: false
+    floorSurface: false
+    hideOnPlaced: false
+    labels: false
+    lookingCopy: false
+    maxTiltDegrees: false
+    minFloorFraction: false
+    nextScreen: false
+    notFloorCopy: false
+    obstructedCopy: false
+    plateButton: false
+    promptText: false
+    reach: false
+    readyCopy: false
+    refusedTexture: false
+    surfaceOversize: false
+    surfaceTexture: false
+    tooSmallCopy: false
+    worldQuery: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
+      worldQuery: !<reference.WorldQueryModule> 00000000-0000-0000-0000-000000000000
+      floorRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      promptText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      nextScreen: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      hideOnPlaced: !<reference.SceneObject[]>
+        []
+      maxTiltDegrees: !<float> 25.000000
+      reach: !<float> 500.000000
+      ceilingGuard: !<float> -20.000000
+      floorSize: !<float> 60.000000
+      floorSurface: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      surfaceOversize: 1.450000
+      surfaceTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      refusedTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      labels: !<reference.SceneObject[]>
+        []
+      designSize: !<float> 60.000000
+      minFloorFraction: 0.900000
+      fallbackAfter: !<float> 4.000000
+      autoConfirmAfter: !<float> 0.000000
+      fallbackDistance: !<float> 150.000000
+      fallbackDrop: !<float> 120.000000
+      lookingCopy: Look at the floor in front of you
+      readyCopy: Press to lay your dance floor here
+      notFloorCopy: "That's not a floor — look down"
+      obstructedCopy: "Something's in the way — try a clearer spot"
+      tooSmallCopy: Not enough room here — you need a bit more space
+      plateButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.DeviceTracking deviceTracking {"hint":"Device Tracking, in World mode. Unlocks plane detection and room classification — without it placement drops to plain hit testing."}'
+    - '// @input Asset.WorldQueryModule worldQuery {"hint":"World Query module, used when planes are unavailable."}'
+    - '// @input SceneObject floorRoot {"hint":"The floor plate. Moved to follow the gaze, then left where it is confirmed."}'
+    - '// @input Component.Text promptText {"hint":"Line telling the dancer what to do."}'
+    - '// @input SceneObject nextScreen {"hint":"Enabled once the floor is down — the globe screen."}'
+    - "// @input SceneObject[] hideOnPlaced {\"hint\":\"Switched off once the floor is down: the prompt line and the \\\"Pinch to Set\\\" hint. The plate itself stays — it is the dancer's marked-out area for the rest of the session, not a placement aid.\"}"
+    - '// @ui {"widget":"group_start", "label":"Surface"}'
+    - '// @input float maxTiltDegrees = 25 {"hint":"How far a surface may lean from flat and still count as floor, degrees. Only consulted on the hit-test fallback: plane detection is restricted to horizontal at the source, so walls never reach this check.", "widget":"slider", "min":5, "max":60, "step":1}'
+    - '// @input float reach = 500 {"hint":"How far ahead to look for a surface, cm."}'
+    - '// @input float ceilingGuard = -20 {"hint":"Never accept a surface above this height relative to the eye, cm. Keeps ceilings out."}'
+    - "// @input float floorSize = 60 {\"hint\":\"Width of the square floor, cm. Drives the plate's own geometry, its collider, and the area of room judged underneath it — change this and everything follows.\"}"
+    - "// @input SceneObject floorSurface {\"hint\":\"The soft-edged floor surface. Carries the gradient and the fade, and is scaled from floorSize like everything else. The plate's own hard-edged visual is hidden in favour of this.\"}"
+    - "// @input float surfaceOversize = 1.45 {\"hint\":\"How much wider to cut the surface quad than the floor itself. The texture's solid centre only covers the middle ~70% — the rest is the fade — so the quad has to run past the floor's nominal edge for the solid part to measure floorSize.\", \"widget\":\"slider\", \"min\":1, \"max\":2, \"step\":0.05}"
+    - "// @input Asset.Texture surfaceTexture {\"hint\":\"The surface's normal look: the violet-to-teal sweep with faded edges.\"}"
+    - '// @input Asset.Texture refusedTexture {"hint":"Shown instead while the spot is refused — the same sweep and the same faded edges in red, so the floor reads as unplaceable at a glance without having to read the line above it."}'
+    - '// @input SceneObject[] labels {"hint":"The lettering on the plate. Scaled and repositioned with the floor so the type keeps its proportions at any size, rather than staying 60cm-sized on a plate twice that wide."}'
+    - '// @input float designSize = 60 {"hint":"The floor width the lettering was laid out against, cm. Only used as the baseline for scaling the labels — leave it alone unless you re-position them by hand."}'
+    - '// @input float minFloorFraction = 0.9 {"hint":"How much of the square must read as floor to accept it, 0-1. Lower it if placement feels fussy in cluttered rooms. Only used where the device can classify what it is looking at.", "widget":"slider", "min":0.5, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Fallback"}'
+    - "// @input float fallbackAfter = 4 {\"hint\":\"Give up looking for real floor after this many seconds and show the plate at arm's length anyway, so nobody is stranded on a screen that will not advance. The editor needs this: it reports plane and mesh support it does not actually provide.\"}"
+    - '// @input float autoConfirmAfter {"hint":"Development aid: confirm the floor by itself this many seconds after it becomes valid, so the rest of the flow can be walked through without a pinch. 0 leaves it to the dancer, which is what ships."}'
+    - '// @input float fallbackDistance = 150 {"hint":"Where the plate sits when no surface can be found: distance ahead, cm."}'
+    - '// @input float fallbackDrop = 120 {"hint":"...and how far below eye level, cm."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Copy"}'
+    - '// @input string lookingCopy = "Look at the floor in front of you"'
+    - '// @input string readyCopy = "Press Set Floor to lay it here"'
+    - "// @input string notFloorCopy = \"That's not a floor — look down\""
+    - "// @input string obstructedCopy = \"Something's in the way — try a clearer spot\""
+    - '// @input string tooSmallCopy = "Not enough room here — you need a bit more space"'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input AssignableType_1 plateButton {"hint":"The plate itself, as a control. Pinching it lays the floor. While the spot is refused it is held inactive, which both greys it out and makes the pinch do nothing — the same gesture stays available, it just will not fire."}'

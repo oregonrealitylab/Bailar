@@ -1,0 +1,66 @@
+- !<AssetImportMetadata/d50fafa0-0740-44ab-8e02-3de3cf7e907f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 521a9c44-a6e0-4e34-9c89-8658455c948d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 521a9c44-a6e0-4e34-9c89-8658455c948d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 59935234-14de-4426-8dd7-cc2005ea60e7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/59935234-14de-4426-8dd7-cc2005ea60e7>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 44c304b6-61bf-493a-a41f-fec54c821abc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoAdvanceAfter: false
+    buttons: false
+    experienceRoot: false
+    fadeDuration: false
+    frames: false
+    slides: false
+    spawnDistance: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - slides: !<reference.SceneObject[]>
+        []
+      buttons: !<MappingBased.AssignableType_1[]>
+        []
+      frames: !<MappingBased.AssignableType_2[]>
+        []
+      experienceRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fadeDuration: 0.450000
+      spawnDistance: !<float> 130.000000
+      autoAdvanceAfter: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject[] slides {"hint":"Slide panels, in order. Only the first is shown at start."}'
+    - '// @input AssignableType_1[] buttons {"hint":"Advance button for each slide, same order as Slides."}'
+    - '// @input AssignableType_2[] frames {"hint":"Frames backing each slide, same order. Used for the closing fade."}'
+    - '// @input SceneObject experienceRoot {"hint":"Enabled once the last slide is dismissed — the trainer."}'
+    - '// @input float fadeDuration = 0.45 {"widget":"slider", "min":0.1, "max":2, "step":0.05}'
+    - '// @input float spawnDistance = 130 {"hint":"Placed this far in front of the head when the deck opens, cm. 0 keeps the authored position."}'
+    - '// @input float autoAdvanceAfter {"hint":"Dev only: auto-advance each slide after this many seconds, so the flow can be exercised in the preview without a hand to pinch with. 0 disables."}'

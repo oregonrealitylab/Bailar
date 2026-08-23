@@ -1,0 +1,73 @@
+- !<AssetImportMetadata/d9f6918a-d616-4490-8880-ac3e4532cdb4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0d0acad9-992b-4099-8856-1dde69b0225c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0d0acad9-992b-4099-8856-1dde69b0225c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f11c6fbf-6004-4652-9e7b-9e1310cb5a7f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f11c6fbf-6004-4652-9e7b-9e1310cb5a7f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 9f24c0a6-04ac-4068-9f3d-2003c0325bee
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    fadeDuration: false
+    hitButton: false
+    hoverColor: false
+    normalColor: false
+    orbVisual: false
+    regionName: false
+    releaseDuration: false
+    squeezeDuration: false
+    squeezeScale: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - regionName: Region
+      hitButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      orbVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      normalColor: !<Vec4> {x: 1.000000, y: 0.830000, z: 0.250000, w: 1.000000}
+      hoverColor: !<Vec4> {x: 0.350000, y: 1.000000, z: 0.600000, w: 1.000000}
+      squeezeScale: 0.700000
+      squeezeDuration: 0.100000
+      releaseDuration: 0.160000
+      fadeDuration: 0.350000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string regionName = "Region" {"hint":"Name of the region this orb stands for."}'
+    - '// @input AssignableType_1 hitButton {"hint":"Invisible hit target for hover and pinch."}'
+    - '// @input Component.RenderMeshVisual orbVisual {"hint":"The orb itself, tinted and faded by hand. Leave empty to use the button as the marker instead, in which case the theme draws it and the colours below go unused."}'
+    - '// @ui {"widget":"group_start", "label":"Look"}'
+    - '// @input vec4 normalColor = "{1,0.83,0.25,1}" {"widget":"color"}'
+    - '// @input vec4 hoverColor = "{0.35,1,0.6,1}" {"hint":"Tint while the pointer is over the orb.", "widget":"color"}'
+    - '// @input float squeezeScale = 0.7 {"hint":"How far the orb squashes while pinched, as a fraction of its size.", "widget":"slider", "min":0.3, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Timing"}'
+    - '// @input float squeezeDuration = 0.1 {"widget":"slider", "min":0.03, "max":0.5, "step":0.01}'
+    - '// @input float releaseDuration = 0.16 {"widget":"slider", "min":0.05, "max":0.8, "step":0.01}'
+    - '// @input float fadeDuration = 0.35 {"widget":"slider", "min":0.1, "max":1.5, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

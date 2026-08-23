@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/1c28c798-a5ca-415f-bc36-601354e236cc>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8ccc2066-615a-40d4-af70-80b0e688286f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8ccc2066-615a-40d4-af70-80b0e688286f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f860e32f-899d-4654-918c-82117e7cd3a7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f860e32f-899d-4654-918c-82117e7cd3a7>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 4b9628fd-dd41-4ea3-9100-cc7bde87df9e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    fallbackTransition: false
+    hoverAudio: false
+    loadingAudio: false
+    selectAudio: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - hoverAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      selectAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      loadingAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      fallbackTransition: !<float> 2.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.AudioComponent hoverAudio {"hint":"Played when a pointer first lands on a button."}'
+    - '// @input Component.AudioComponent selectAudio {"hint":"Played the moment a button is pressed."}'
+    - '// @input Component.AudioComponent loadingAudio {"hint":"Played once at the start of a screen transition. Its length sets the transition budget."}'
+    - "// @input float fallbackTransition = 2 {\"hint\":\"Fallback transition length if the loading clip's duration can't be read, seconds.\"}"

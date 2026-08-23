@@ -1,0 +1,88 @@
+- !<AssetImportMetadata/2211cceb-452d-42a9-bf29-6867e9494e67>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 863844ef-d069-41fc-91b8-c1526500c16d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 863844ef-d069-41fc-91b8-c1526500c16d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c17bd4f9-6ef0-46f6-9063-9c56b24ea836
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c17bd4f9-6ef0-46f6-9063-9c56b24ea836>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 904fd3a1-5f32-4130-bbf2-040df5ecaa21
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoOpenIndex: false
+    checkGlyph: false
+    detailPanel: false
+    detailView: false
+    labelSize: false
+    progressMode: false
+    rowGap: false
+    rowHeight: false
+    rowParent: false
+    rowRenderOrder: false
+    rowTemplate: false
+    rowWidth: false
+    slider: false
+    viewportHeight: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - rowParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      slider: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      rowTemplate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rowWidth: !<float> 24.000000
+      rowHeight: !<float> 5.000000
+      rowGap: 1.500000
+      viewportHeight: !<float> 15.000000
+      labelSize: !<float> 46.000000
+      progressMode: false
+      checkGlyph: ✓
+      rowRenderOrder: !<float> 6.000000
+      detailPanel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      detailView: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      autoOpenIndex: !<float> -1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject rowParent {"hint":"Plain container the rows are cloned into. Its origin is the TOP of the visible list area; rows run downward from there."}'
+    - '// @input AssignableType_1 slider {"hint":"Scrollbar driving the list. Rotated 90 on Z so it reads as vertical."}'
+    - '// @input SceneObject rowTemplate {"hint":"A single authored row — a UIKit Button with a Text label — used as the template every row is cloned from. Keep it switched off; it is never shown."}'
+    - '// @ui {"widget":"group_start", "label":"Layout"}'
+    - '// @input float rowWidth = 24 {"hint":"Row width, cm."}'
+    - '// @input float rowHeight = 3.2 {"hint":"Row height, cm."}'
+    - '// @input float rowGap = 0.6 {"hint":"Gap between rows, cm."}'
+    - '// @input float viewportHeight = 15 {"hint":"Height of the visible list area, cm. Rows outside it are hidden."}'
+    - // @input float labelSize = 30
+    - '// @ui {"widget":"group_end"}'
+    - '// @input bool progressMode {"hint":"Turn on for the Tracker list: rows show a completion tick and stop being pressable, since there is nothing behind them to open."}'
+    - '// @ui {"widget":"group_start", "label":"Completion"}'
+    - '// @input string checkGlyph = "✓" {"hint":"Glyph shown at the right of a finished row."}'
+    - '// @ui {"widget":"group_end"}'
+    - "// @input float rowRenderOrder = 6 {\"hint\":\"Render order for the rows. Must sit above whatever the panel's own PanelRendering gave the list area, or rows draw behind the frame.\"}"
+    - '// @input SceneObject detailPanel {"hint":"Detail page opened when a row is pressed. Ignored in Tracker mode."}'
+    - "// @input AssignableType_2 detailView {\"hint\":\"The detail page's view, populated with the chosen dance.\"}"
+    - "// @input float autoOpenIndex = -1 {\"hint\":\"Dev only: open this row's detail page on its own, so the page can be checked without a pinch. -1 disables.\"}"

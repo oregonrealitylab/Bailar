@@ -1,0 +1,146 @@
+- !<AssetImportMetadata/426b366a-45e3-4608-8755-8ddd8131e7ed>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3e4efc93-2ba1-427d-bc91-5c44a380b9ce
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3e4efc93-2ba1-427d-bc91-5c44a380b9ce
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d28b5c5b-f990-4cbd-8d5d-6e206cc6ec3b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d28b5c5b-f990-4cbd-8d5d-6e206cc6ec3b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 828e90c2-5ac9-45ea-b095-df9055400c0e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    beatSampleLag: false
+    beatsPerLoop: false
+    bpm: false
+    calibrationHold: false
+    calibrationSwayLimit: false
+    completeButtonText: false
+    danceName: false
+    demoBars: false
+    demoLeadCounts: false
+    demoPrompt: false
+    display: false
+    followAmount: false
+    followLag: false
+    latencyOffset: false
+    minStepTravel: false
+    mirrorAlternateBars: false
+    mirrorSource: false
+    music: false
+    orb: false
+    panelDistance: false
+    panelObject: false
+    prepBeats: false
+    readyButtonText: false
+    readyMessage: false
+    requireBeatTiming: false
+    setsPerStage: false
+    stagePrompt: false
+    stepSizeMax: false
+    stepSizeMin: false
+    watchAgainText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - display: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      stagePrompt: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      music: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      panelObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      bpm: !<float> 125.000000
+      beatsPerLoop: !<float> 16.000000
+      latencyOffset: 0.060000
+      setsPerStage: !<float> 2.000000
+      prepBeats: !<float> 8.000000
+      demoBars: !<float> 1.000000
+      mirrorAlternateBars: true
+      demoPrompt: Watch the orb first
+      readyMessage: "Ready to try?"
+      readyButtonText: Start
+      watchAgainText: Watch Again
+      demoLeadCounts: !<float> 8.000000
+      stepSizeMin: 0.150000
+      stepSizeMax: 0.450000
+      minStepTravel: 0.100000
+      calibrationHold: !<float> 2.000000
+      calibrationSwayLimit: 0.050000
+      requireBeatTiming: false
+      panelDistance: !<float> 140.000000
+      followAmount: !<float> 1.000000
+      followLag: 0.350000
+      mirrorSource: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      orb: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      danceName: Bachata
+      completeButtonText: Complete Lesson
+      beatSampleLag: 0.250000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType_1 display
+    - // @input AssignableType_2 stagePrompt
+    - // @input Component.AudioComponent music
+    - '// @input SceneObject panelObject {"hint":"The coach panel. Hidden while a between-stages message is up."}'
+    - '// @ui {"widget":"group_start", "label":"Tempo"}'
+    - '// @input float bpm = 125 {"hint":"Bachata sits between 108 and 140. The bundled loop is 125."}'
+    - '// @input float beatsPerLoop = 16 {"hint":"Must be a multiple of 8 or the 8-count phase walks on every repeat."}'
+    - '// @input float latencyOffset = 0.06 {"hint":"Seconds added to the beat clock for audio output latency. 0.04-0.12.", "widget":"slider", "min":0, "max":0.25, "step":0.01}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Progression"}'
+    - '// @input float setsPerStage = 2 {"hint":"Clean 8-counts needed to clear a stage. One 8-count is one Set."}'
+    - '// @input float prepBeats = 8 {"hint":"Counts of preparation before grading starts, at every stage."}'
+    - '// @ui {"widget":"group_start", "label":"Watch first"}'
+    - '// @input float demoBars = 2 {"hint":"Full 8-counts the orb dances through before the dancer is asked to join in, at the start of every stage. Nothing is graded during these. 0 skips straight to the count-in.", "widget":"slider", "min":0, "max":4, "step":1}'
+    - '// @input bool mirrorAlternateBars = true {"hint":"Run every second demonstration bar mirrored, so the orb shows the basic travelling one way and then the other before handing over. With this off the same bar simply repeats, which only ever demonstrates one side."}'
+    - '// @input string demoPrompt = "Watch the orb first" {"hint":"Shown on the coach panel while the orb is demonstrating."}'
+    - '// @input string readyMessage = "Ready to try?" {"hint":"The question on the panel that follows the demonstration."}'
+    - '// @input string readyButtonText = "Start" {"hint":"Label on the button that starts the graded attempt."}'
+    - '// @input string watchAgainText = "Watch Again" {"hint":"Label on the button that replays the demonstration."}'
+    - "// @input float demoLeadCounts = 8 {\"hint\":\"Counts of lead-in before the orb starts demonstrating, at the routine's own tempo. This is reading time — the dancer is being told to watch something that has not started moving yet, and without a pause the first step is gone before they have looked up. 0 starts the demonstration immediately.\", \"widget\":\"slider\", \"min\":0, \"max\":8, \"step\":1}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Step thresholds (metres)"}'
+    - "// @input float stepSizeMin = 0.15 {\"hint\":\"Below this a step counts, but gets a 'bigger steps' nudge.\"}"
+    - '// @input float stepSizeMax = 0.45 {"hint":"Above this the step is oversized."}'
+    - '// @input float minStepTravel = 0.1 {"hint":"A burst must travel at least this far to register at all."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Calibration"}'
+    - '// @input float calibrationHold = 2 {"hint":"Seconds of stillness required before the session starts."}'
+    - '// @input float calibrationSwayLimit = 0.05 {"hint":"Movement above this restarts the stillness timer, metres."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Grading"}'
+    - '// @input bool requireBeatTiming {"hint":"On: a step only scores if it also lands near its beat. Off: the routine is self-paced and timing is reported but never gates the verdict."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Panel follow"}'
+    - '// @input float panelDistance = 140 {"hint":"Panel distance in front of the head at session start, cm."}'
+    - "// @input float followAmount = 1 {\"hint\":\"How much of the dancer's travel the panel tracks. 1 keeps it dead ahead; lower values let it trail so the panel still reads as a fixed landmark.\", \"widget\":\"slider\", \"min\":0, \"max\":1, \"step\":0.05}"
+    - '// @input float followLag = 0.35 {"hint":"Seconds for the panel to catch up. Higher slides more lazily.", "widget":"slider", "min":0.05, "max":1.5, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input AssignableType_3 mirrorSource {"hint":"Body tracker used when Mirror Mode is on in Settings. Leave empty and the routine always reads head travel, whatever the setting says."}'
+    - '// @input AssignableType_4 orb {"hint":"Guide orb that dances the step ahead of the dancer. Optional."}'
+    - '// @input string danceName = "Bachata" {"hint":"Which catalogue entry this routine teaches. Picks the routine out of Routines.ts and is the key progress is recorded under."}'
+    - '// @input string completeButtonText = "Complete Lesson" {"hint":"Label on the button that closes out a finished lesson."}'
+    - "// @input float beatSampleLag = 0.25 {\"hint\":\"Beat-graded stages only. How far past the count, in beats, the step's window is measured. Dancers do not stop dead on the beat, so a window that ends exactly on it straddles the turnaround and reads a reversal as no movement at all. Raise it if changes of direction are missed, lower it if steps score a beat late.\", \"widget\":\"slider\", \"min\":0, \"max\":0.5, \"step\":0.05}"

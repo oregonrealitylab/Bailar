@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/aeee460f-1fbd-420f-be07-9a48772f576e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5102cf33-5263-45a3-ad52-c42acee0296d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5102cf33-5263-45a3-ad52-c42acee0296d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2000b56f-3e7a-41ce-bdc5-7f7ae8b2886a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2000b56f-3e7a-41ce-bdc5-7f7ae8b2886a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 3006bcd4-c666-483e-81aa-21ecee48717a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    baseOrder: false
+    cullPad: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - baseOrder: !<float> 0.000000
+      cullPad: !<float> 10.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input float baseOrder {\"hint\":\"Render order given to this object's own visuals. Children count upward from here.\"}"
+    - "// @input float cullPad = 10 {\"hint\":\"How far to inflate each visual's culling box, as a multiple of its size. Raise it if parts of the panel still blink out at the edge of view.\"}"

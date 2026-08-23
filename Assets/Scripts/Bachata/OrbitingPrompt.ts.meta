@@ -1,0 +1,99 @@
+- !<AssetImportMetadata/e527b417-6bcf-40e4-8a94-00b4d5d866d7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9b2fc534-93fa-4b13-a8ce-28bbaf4e548b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9b2fc534-93fa-4b13-a8ce-28bbaf4e548b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a9694692-4e7a-4534-844a-c7bb43b1ba36
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a9694692-4e7a-4534-844a-c7bb43b1ba36>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 3e9d2850-47f0-4ed6-b023-e24aff4f4232
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    baseMaterial: false
+    brightness: false
+    colorEnd: false
+    colorMiddle: false
+    colorStart: false
+    copies: false
+    degreesPerCharacter: false
+    degreesPerSecond: false
+    extrusionDepth: false
+    faceColor: false
+    font: false
+    height: false
+    message: false
+    pitch: false
+    radius: false
+    textSize: false
+    useGradient: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - message: Pick a Region
+      copies: !<float> 2.000000
+      font: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      baseMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      radius: !<float> 26.000000
+      height: !<float> 22.000000
+      degreesPerCharacter: 5.500000
+      pitch: !<float> -20.000000
+      textSize: !<float> 3.000000
+      extrusionDepth: 0.400000
+      degreesPerSecond: !<float> 8.000000
+      faceColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      useGradient: false
+      colorStart: !<Vec4> {x: 0.340000, y: 0.220000, z: 0.520000, w: 1.000000}
+      colorMiddle: !<Vec4> {x: 0.260000, y: 0.360000, z: 0.500000, w: 1.000000}
+      colorEnd: !<Vec4> {x: 0.200000, y: 0.560000, z: 0.520000, w: 1.000000}
+      brightness: 2.200000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string message = "Pick a Region" {"hint":"The words to orbit."}'
+    - '// @input float copies = 2 {"hint":"How many copies to space evenly around the ring."}'
+    - '// @input Asset.Font font {"hint":"3D font for the text."}'
+    - '// @input Asset.Material baseMaterial {"hint":"Material cloned per character. Its base colour is overwritten per glyph."}'
+    - '// @ui {"widget":"group_start", "label":"Ring"}'
+    - "// @input float radius = 26 {\"hint\":\"Distance from the globe's centre out to the text, cm.\"}"
+    - "// @input float height = 22 {\"hint\":\"Height above the globe's centre, cm. Raise it to sit further over the top.\"}"
+    - '// @input float degreesPerCharacter = 5.5 {"hint":"Angle between one character and the next, degrees. Widen it to spread the words out."}'
+    - '// @input float pitch = -20 {"hint":"Tilt of the text, degrees. Negative tips the tops of the letters outward."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Type"}'
+    - // @input float textSize = 3
+    - // @input float extrusionDepth = 0.4
+    - '// @ui {"widget":"group_end"}'
+    - '// @input float degreesPerSecond = 8 {"hint":"Orbit speed in degrees per second. Negative reverses it, 0 holds it still.", "widget":"slider", "min":-60, "max":60, "step":1}'
+    - '// @ui {"widget":"group_start", "label":"Colour"}'
+    - '// @input vec4 faceColor = {1,1,1,1} {"hint":"Colour of the letters. White reads cleanly against the globe.", "widget":"color"}'
+    - "// @input bool useGradient {\"hint\":\"Sweep the UI's violet-to-teal gradient across the words instead of using the flat colour above. A Text3D carries one material for the whole extruded glyph, face and sides together, so this tints the letters rather than just their edges — handsome, but harder to read against the earth.\"}"
+    - '// @input vec4 colorStart = {0.34,0.22,0.52,1} {"hint":"One end of the sweep.", "widget":"color"}'
+    - '// @input vec4 colorMiddle = {0.26,0.36,0.5,1} {"hint":"Middle of the sweep.", "widget":"color"}'
+    - '// @input vec4 colorEnd = {0.2,0.56,0.52,1} {"hint":"The far end of the sweep.", "widget":"color"}'
+    - "// @input float brightness = 2.2 {\"hint\":\"Multiplies the gradient. The UI's own values are tuned for a lit panel and read dark on unlit text, so this lifts them without changing the hues.\", \"widget\":\"slider\", \"min\":0.5, \"max\":4, \"step\":0.1}"
+    - '// @ui {"widget":"group_end"}'

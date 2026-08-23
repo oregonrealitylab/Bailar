@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/a37166da-0678-4645-be07-a22dbce054f8>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2970dc9d-af40-4ccf-8124-e0bff7f23c79
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2970dc9d-af40-4ccf-8124-e0bff7f23c79
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 70ea4628-3fe3-42f1-bb4d-5b0b438a115f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/70ea4628-3fe3-42f1-bb4d-5b0b438a115f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: a264f447-9e58-4853-abac-ed0eb4769d9e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    grabRadius: false
+    idleSpin: false
+    momentum: false
+    sensitivity: false
+    spinTarget: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - spinTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      grabRadius: !<float> 25.000000
+      sensitivity: !<float> 4.000000
+      momentum: 0.900000
+      idleSpin: !<float> 3.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject spinTarget {"hint":"The object actually rotated, and the one the collider is built on."}'
+    - "// @input float grabRadius = 25 {\"hint\":\"Radius of the grab sphere, cm. Should match the globe's visible radius.\"}"
+    - '// @input float sensitivity = 6 {"hint":"Degrees of spin per centimetre of hand movement.", "widget":"slider", "min":0.5, "max":20, "step":0.25}'
+    - '// @input float momentum = 0.92 {"hint":"How much spin carries on after release. 0 stops dead, 0.97 coasts a long way.", "widget":"slider", "min":0, "max":0.99, "step":0.01}'
+    - '// @input float idleSpin = 3 {"hint":"Degrees per second of idle drift when untouched. 0 holds still."}'

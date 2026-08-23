@@ -1,0 +1,66 @@
+- !<AssetImportMetadata/362a7ad7-220b-4842-8e3f-c72a7c1d6026>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5a515ca3-4c10-4885-bf90-e163772bfad0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5a515ca3-4c10-4885-bf90-e163772bfad0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 880e19ab-486b-4591-bbb2-86926e3b93b3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/880e19ab-486b-4591-bbb2-86926e3b93b3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 798d3cd1-88fb-4788-8331-3ae2e8d27cc9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoExitAfter: false
+    exitButtons: false
+    globe: false
+    globeScreen: false
+    mainMenu: false
+    trainers: false
+    tutorialRoots: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - exitButtons: !<MappingBased.AssignableType_1[]>
+        []
+      tutorialRoots: !<reference.SceneObject[]>
+        []
+      globeScreen: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      trainers: !<MappingBased.AssignableType_2[]>
+        []
+      globe: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      mainMenu: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      autoExitAfter: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType_1[] exitButtons {"hint":"Every button that should leave the tutorial. One per panel that can be on screen."}'
+    - '// @input SceneObject[] tutorialRoots {"hint":"Screens switched off on the way out — the trainer and the onboarding deck."}'
+    - '// @input SceneObject globeScreen {"hint":"The globe screen, switched back on."}'
+    - "// @input AssignableType_2[] trainers {\"hint\":\"Every dance's trainer. All are torn down on the way out — only one is ever running — and each is watched for its lesson being completed.\"}"
+    - '// @input AssignableType_3 globe {"hint":"The globe, so its orbs come back instead of it reappearing mid-selection."}'
+    - '// @input AssignableType_4 mainMenu {"hint":"Main menu, raised automatically when a lesson is finished rather than merely abandoned — a dancer who just completed one is most likely going straight to the Tracker or the next dance."}'
+    - '// @input float autoExitAfter {"hint":"Dev only: leave on its own this many seconds after the tutorial opens. 0 disables."}'

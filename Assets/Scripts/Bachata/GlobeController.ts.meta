@@ -1,0 +1,105 @@
+- !<AssetImportMetadata/dbe03932-0eda-4cd9-a15f-1f01d244988b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6ee9e199-28db-48ef-88c7-1810bdb754ae
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6ee9e199-28db-48ef-88c7-1810bdb754ae
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f363bb1d-cf3f-4975-bef3-f9f3b2b73f72
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f363bb1d-cf3f-4975-bef3-f9f3b2b73f72>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: d8452fe6-c316-4b41-9880-07b9b3491616
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoSelectAfter: false
+    autoSelectIndex: false
+    closeButtons: false
+    distance: false
+    fadeInDuration: false
+    floorAnchor: false
+    globeObject: false
+    globeRadius: false
+    globeRoot: false
+    heightOffset: false
+    markerLift: false
+    markers: false
+    panelDepth: false
+    panelHeight: false
+    regionPanels: false
+    riseDuration: false
+    riseOvershoot: false
+    scaleInWith: false
+    snapToSurface: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - globeRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      globeObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      markers: !<MappingBased.AssignableType_1[]>
+        []
+      regionPanels: !<reference.SceneObject[]>
+        []
+      closeButtons: !<MappingBased.AssignableType_2[]>
+        []
+      panelDepth: !<float> 45.000000
+      panelHeight: !<float> 46.000000
+      distance: !<float> 90.000000
+      heightOffset: !<float> -10.000000
+      globeRadius: !<float> 25.000000
+      markerLift: 1.180000
+      snapToSurface: true
+      fadeInDuration: 0.600000
+      riseDuration: 0.900000
+      riseOvershoot: true
+      scaleInWith: !<reference.SceneObject[]>
+        []
+      floorAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      autoSelectAfter: !<float> 0.000000
+      autoSelectIndex: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject globeRoot {"hint":"Root of the globe screen. Disabled once a region is chosen."}'
+    - '// @input SceneObject globeObject {"hint":"The globe model. Markers are parented here so they turn with it."}'
+    - '// @input AssignableType_1[] markers {"hint":"Markers, in order."}'
+    - '// @input SceneObject[] regionPanels {"hint":"Panel each orb raises, same order as Markers."}'
+    - '// @input AssignableType_2[] closeButtons {"hint":"Close button on each panel, same order as Region Panels."}'
+    - '// @input float panelDepth = 45 {"hint":"How far in front of the globe, toward the viewer, every panel sits, cm."}'
+    - "// @input float panelHeight {\"hint\":\"Vertical offset from the globe's centre, cm. 0 puts the panel level with it.\"}"
+    - '// @ui {"widget":"group_start", "label":"Placement"}'
+    - '// @input float distance = 90 {"hint":"Distance in front of the head where the globe floats, cm."}'
+    - '// @input float heightOffset = -10 {"hint":"Height relative to eye level, cm. Negative sits it lower."}'
+    - '// @input float globeRadius = 25 {"hint":"Radius of the globe model at scale 1, cm. Used to sit markers on the surface."}'
+    - '// @input float markerLift = 1.06 {"hint":"How far above the surface the anchors sit, as a fraction of the radius.", "widget":"slider", "min":1, "max":1.6, "step":0.01}'
+    - '// @input bool snapToSurface = true {"hint":"Snap anchors onto the sphere at run time. Turn off to use their authored positions exactly."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input float fadeInDuration = 0.6 {"hint":"Seconds for the globe and buttons to grow to full size when the screen opens."}'
+    - '// @input float riseDuration = 0.9 {"hint":"Seconds for the globe to rise from the dance floor up to its resting height. Runs alongside the growth, so the screen looks like it is lifting out of the floor the dancer just laid. 0 skips the rise and places it directly."}'
+    - '// @input bool riseOvershoot = true {"hint":"Overshoot the resting height slightly and settle back, rather than easing flatly into it. Reads as the screen coming to rest instead of stopping dead."}'
+    - '// @input SceneObject[] scaleInWith {"hint":"Anything else that should scale up alongside the globe — the Main Menu button, so the screen arrives as one piece rather than the globe growing into a button that was already sitting there."}'
+    - "// @input SceneObject floorAnchor {\"hint\":\"Dance floor to centre the globe over. With one set, the globe keeps its usual height but sits above the floor's middle instead of wherever the dancer happened to be looking.\"}"
+    - '// @input float autoSelectAfter {"hint":"Dev only: auto-press this marker index after N seconds. 0 disables."}'
+    - // @input float autoSelectIndex

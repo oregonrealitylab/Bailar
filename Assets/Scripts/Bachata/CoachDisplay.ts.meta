@@ -1,0 +1,72 @@
+- !<AssetImportMetadata/3047d5ea-db37-4767-b724-60a24711b7ae>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b62cb06e-23be-4390-9bbd-0e864f20c510
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b62cb06e-23be-4390-9bbd-0e864f20c510
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 31354c96-a67b-4b0c-912c-e1ec3ef6caf6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/31354c96-a67b-4b0c-912c-e1ec3ef6caf6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 42b39c7d-6126-4751-83be-a9a2fc3b1dc5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    countText: false
+    debugText: false
+    feedbackLight: false
+    flashDecay: false
+    lightMargin: false
+    panelObject: false
+    promptText: false
+    showDebug: false
+    stageText: false
+    verdictText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - countText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      promptText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      stageText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      verdictText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      debugText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      feedbackLight: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      panelObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lightMargin: !<float> 7.000000
+      flashDecay: 0.400000
+      showDebug: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.Text countText {"hint":"Large 1-8 count readout."}'
+    - '// @input Component.Text promptText {"hint":"What to do right now."}'
+    - "// @input Component.Text stageText {\"hint\":\"Current stage and set progress, e.g. 'Side to side - Set 1/2'.\"}"
+    - '// @input Component.Text verdictText {"hint":"Verdict on the step just taken."}'
+    - '// @input Component.Text debugText {"hint":"Live lateral/velocity readout. Turn off once tracking is trusted."}'
+    - '// @input Component.RenderMeshVisual feedbackLight {"hint":"Additive plane behind the panel. Flashes on each graded step."}'
+    - '// @input SceneObject panelObject {"hint":"The panel the light sits behind. The light is sized from it automatically."}'
+    - '// @input float lightMargin = 7 {"hint":"How far the glow extends past every edge of the panel, cm."}'
+    - '// @input float flashDecay = 0.4 {"hint":"Seconds for the flash to decay back to black.", "widget":"slider", "min":0.1, "max":1.5, "step":0.05}'
+    - // @input bool showDebug = true

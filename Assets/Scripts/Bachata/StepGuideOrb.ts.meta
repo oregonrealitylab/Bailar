@@ -1,0 +1,122 @@
+- !<AssetImportMetadata/ecd4bbdb-46c5-4c5f-91eb-5d7e164d6ac4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> be7a8cf7-0a06-4935-8c7c-f8ff3598f364
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> be7a8cf7-0a06-4935-8c7c-f8ff3598f364
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1dce5a1a-e995-4881-b7c8-f9bc958f1068
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1dce5a1a-e995-4881-b7c8-f9bc958f1068>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: f7a93507-0446-4ac8-bdaf-bdef91d873bd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accuracyHold: false
+    baseMaterial: false
+    coreRadius: false
+    distance: false
+    glowMaterial: false
+    glowShells: false
+    glowSpread: false
+    glowStrength: false
+    heightOffset: false
+    hoverAmplitude: false
+    hoverSpeed: false
+    idleColor: false
+    overshoot: false
+    particleCount: false
+    particleScale: false
+    pulseMin: false
+    pulseSpeed: false
+    sphereMesh: false
+    stepDistance: false
+    swirlColorA: false
+    swirlColorB: false
+    swirlRadius: false
+    swirlSpeed: false
+    travelFraction: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - sphereMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      baseMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      glowMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      distance: !<float> 60.000000
+      heightOffset: !<float> 0.000000
+      stepDistance: !<float> 18.000000
+      coreRadius: !<float> 3.000000
+      glowShells: !<float> 3.000000
+      glowSpread: 2.400000
+      glowStrength: 0.400000
+      particleCount: !<float> 26.000000
+      swirlRadius: 1.350000
+      particleScale: 0.120000
+      swirlSpeed: 0.550000
+      swirlColorA: !<Vec4> {x: 0.350000, y: 0.950000, z: 0.700000, w: 1.000000}
+      swirlColorB: !<Vec4> {x: 0.600000, y: 0.350000, z: 0.950000, w: 1.000000}
+      idleColor: !<Vec4> {x: 0.240000, y: 0.780000, z: 0.620000, w: 1.000000}
+      travelFraction: 0.550000
+      overshoot: 0.900000
+      hoverAmplitude: 0.900000
+      hoverSpeed: 0.400000
+      pulseMin: 0.800000
+      pulseSpeed: 0.500000
+      accuracyHold: 0.900000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.RenderMesh sphereMesh {"hint":"Sphere mesh used for the orb, its glow shells and every particle."}'
+    - '// @input Asset.Material baseMaterial {"hint":"Unlit material for the solid core and the swirl. Cloned per piece."}'
+    - '// @input Asset.Material glowMaterial {"hint":"Material for the glow shells. Wants additive blending with depth writing off, or the shells occlude each other and the orb reads as a flat blob."}'
+    - '// @ui {"widget":"group_start", "label":"Placement"}'
+    - '// @input float distance = 60 {"hint":"How far in front of the dancer the orb floats, cm."}'
+    - '// @input float heightOffset {"hint":"Height relative to eye level, cm. 0 is dead ahead."}'
+    - '// @input float stepDistance = 18 {"hint":"How far the orb travels per step, cm."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Orb"}'
+    - '// @input float coreRadius = 3 {"hint":"Radius of the solid core, cm."}'
+    - '// @input float glowShells = 3 {"hint":"How many glow shells surround the core. Each is larger and fainter."}'
+    - '// @input float glowSpread = 2.4 {"hint":"Scale of the outermost shell, as a multiple of the core.", "widget":"slider", "min":1.1, "max":4, "step":0.1}'
+    - '// @input float glowStrength = 0.4 {"hint":"Opacity of the innermost shell. The rest fall away from it.", "widget":"slider", "min":0.05, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Swirl"}'
+    - // @input float particleCount = 26
+    - "// @input float swirlRadius = 1.35 {\"hint\":\"How far the swirl sits off the core's surface, as a multiple of its radius.\", \"widget\":\"slider\", \"min\":1, \"max\":2.5, \"step\":0.05}"
+    - '// @input float particleScale = 0.12 {"hint":"Particle size as a fraction of the core.", "widget":"slider", "min":0.02, "max":0.4, "step":0.01}'
+    - '// @input float swirlSpeed = 0.55 {"hint":"Turns per second of the swirl.", "widget":"slider", "min":0.05, "max":3, "step":0.05}'
+    - '// @input vec4 swirlColorA = {0.35,0.95,0.7,1} {"widget":"color"}'
+    - '// @input vec4 swirlColorB = {0.6,0.35,0.95,1} {"widget":"color"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input vec4 idleColor = {0.24,0.78,0.62,1} {"hint":"Colour before the first step of a set is graded.", "widget":"color"}'
+    - '// @ui {"widget":"group_start", "label":"Motion"}'
+    - '// @input float travelFraction = 0.55 {"hint":"Share of a beat spent travelling. The rest of the beat is the hold.", "widget":"slider", "min":0.2, "max":1, "step":0.05}'
+    - '// @input float overshoot = 0.9 {"hint":"How far the orb overshoots its mark before settling back. 0 is a plain glide; higher values give the burst-and-settle that reads as a step landing.", "widget":"slider", "min":0, "max":2, "step":0.05}'
+    - '// @input float hoverAmplitude = 0.9 {"hint":"How far the orb bobs up and down, cm.", "widget":"slider", "min":0, "max":4, "step":0.1}'
+    - '// @input float hoverSpeed = 0.4 {"hint":"Bobs per second.", "widget":"slider", "min":0.05, "max":2, "step":0.05}'
+    - '// @input float pulseMin = 0.8 {"hint":"Smallest the orb shrinks to while breathing, as a fraction of full size.", "widget":"slider", "min":0.5, "max":1, "step":0.05}'
+    - '// @input float pulseSpeed = 0.5 {"hint":"Breaths per second.", "widget":"slider", "min":0.05, "max":2, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input float accuracyHold = 0.9 {"hint":"Seconds a graded colour is held before the orb settles back to neutral. The colour is a reaction to one step, not a running score.", "widget":"slider", "min":0.1, "max":3, "step":0.1}'

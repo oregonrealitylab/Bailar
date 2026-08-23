@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/d12d5809-992c-4e00-951a-a2f60221ad89>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8a47889f-d8ef-4950-bc1d-df530f54e91b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8a47889f-d8ef-4950-bc1d-df530f54e91b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 655511f8-c93f-497c-9ddc-45228fa31053
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/655511f8-c93f-497c-9ddc-45228fa31053>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 24c23785-ce85-4a98-97b8-bd0589294915
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    mirrorStatusText: false
+    mirrorSwitch: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - mirrorSwitch: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      mirrorStatusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType_1 mirrorSwitch {"hint":"Switch controlling Mirror Mode. Defaults to off."}'
+    - '// @input Component.Text mirrorStatusText {"hint":"Line under the switch explaining what the current state does."}'

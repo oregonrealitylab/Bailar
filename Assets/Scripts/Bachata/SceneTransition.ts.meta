@@ -1,0 +1,83 @@
+- !<AssetImportMetadata/4e9729a8-7d52-445d-b4b1-70825f3a77a9>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a86ad49e-cf45-46de-8362-677bb81b26eb
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a86ad49e-cf45-46de-8362-677bb81b26eb
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 60347239-f16f-455e-9461-44c76c0b1561
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/60347239-f16f-455e-9461-44c76c0b1561>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 03348bc1-6e70-4611-a161-c784e4dcd9d3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    distance: false
+    fadeOutDuration: false
+    followLag: false
+    holdDuration: false
+    loadingTexture: false
+    occluder: false
+    occluderFadeIn: false
+    overlayFadeIn: false
+    overlayRoot: false
+    overlayVisual: false
+    screenRoots: false
+    size: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - occluder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      overlayRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      overlayVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      screenRoots: !<reference.SceneObject[]>
+        []
+      loadingTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      distance: !<float> 100.000000
+      size: !<Vec2> {x: 70.000000, y: 50.000000}
+      followLag: 0.350000
+      occluderFadeIn: 0.450000
+      overlayFadeIn: 0.400000
+      holdDuration: !<float> 2.000000
+      fadeOutDuration: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject occluder {"hint":"Full-screen quad parented to the camera. Hides the swap."}'
+    - '// @input SceneObject overlayRoot {"hint":"Root of the loading overlay. Disabled except during a transition."}'
+    - '// @input Component.RenderMeshVisual overlayVisual {"hint":"Quad carrying the loading image."}'
+    - '// @input SceneObject[] screenRoots {"hint":"Every screen root in the lens. All of them are switched off once the occluder covers the view, so nothing but the loading image is on screen."}'
+    - '// @input Asset.Texture loadingTexture {"hint":"Only needed if the loading image is animated, so it can be restarted on each transition. Leave empty for a still image."}'
+    - '// @ui {"widget":"group_start", "label":"Placement"}'
+    - '// @input float distance = 100 {"hint":"Distance the overlay rides in front of the head, cm."}'
+    - '// @input vec2 size = {35,25} {"hint":"Overlay size, cm. Width then height."}'
+    - '// @input float followLag = 0.35 {"hint":"Seconds for the overlay to catch up with the gaze. Higher drags more.", "widget":"slider", "min":0.05, "max":1.5, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Timing"}'
+    - '// @input float occluderFadeIn = 0.45 {"hint":"Seconds for the occluder to blot out the view."}'
+    - '// @input float overlayFadeIn = 0.3 {"hint":"Seconds for the loading image to fade up, once the view is covered."}'
+    - '// @input float holdDuration = 2 {"hint":"Seconds the image holds at full opacity. The scene swap happens inside this window."}'
+    - '// @input float fadeOutDuration = 0.5 {"hint":"Seconds for the image and occluder to clear, revealing the new screen."}'
+    - '// @ui {"widget":"group_end"}'

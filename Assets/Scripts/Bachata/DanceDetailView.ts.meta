@@ -1,0 +1,72 @@
+- !<AssetImportMetadata/78ac7130-261f-4230-810d-a7b76739acf9>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7f1b0837-3814-4993-94c6-ff9a62f209ec
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7f1b0837-3814-4993-94c6-ff9a62f209ec
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d44dc7f2-59c3-4109-aa16-92ce8a2a7e80
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d44dc7f2-59c3-4109-aa16-92ce8a2a7e80>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 82db9f7c-8e3b-4734-865e-d4d20a60b696
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bodyText: false
+    charsPerLine: false
+    danceImages: false
+    image: false
+    placeholderImage: false
+    regionText: false
+    slider: false
+    titleText: false
+    visibleLines: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - titleText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      regionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      image: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      danceImages: !<reference.Texture[]>
+        []
+      placeholderImage: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      bodyText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      slider: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      charsPerLine: !<float> 46.000000
+      visibleLines: !<float> 9.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Text titleText
+    - '// @input Component.Text regionText {"hint":"Line under the title, showing where the dance is from."}'
+    - '// @input Component.Image image {"hint":"Picture between the title and the write-up."}'
+    - '// @input Asset.Texture[] danceImages {"hint":"One texture per dance, in catalogue order. Leave a slot empty — or the whole list — and that dance falls back to the placeholder."}'
+    - '// @input Asset.Texture placeholderImage {"hint":"Shown wherever a dance has no picture of its own yet."}'
+    - '// @input Component.Text bodyText {"hint":"The write-up. Only the lines that fit are drawn at any one time."}'
+    - '// @input AssignableType_1 slider {"hint":"Scrollbar for the write-up. Rotated 90 on Z so it reads as vertical."}'
+    - '// @ui {"widget":"group_start", "label":"Body layout"}'
+    - '// @input float charsPerLine = 46 {"hint":"Characters per line to wrap at. Lower this if the text runs past the edge of the panel; raise it if the lines look short."}'
+    - '// @input float visibleLines = 9 {"hint":"How many lines are on screen at once."}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,69 @@
+- !<AssetImportMetadata/afe9ac3b-c1fd-44f0-9116-1c131d9f2d34>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7491682a-0b84-49ca-896e-d4cf3268254b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7491682a-0b84-49ca-896e-d4cf3268254b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7c2075bc-f03b-44a2-aa3a-65411c352308
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7c2075bc-f03b-44a2-aa3a-65411c352308>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: fd13754f-f1b4-4b53-af96-1be94481a7d0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoContinueAfter: false
+    button: false
+    buttonLabel: false
+    buttonObject: false
+    messageText: false
+    root: false
+    secondaryButton: false
+    secondaryLabel: false
+    secondaryObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - root: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      messageText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      button: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      buttonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      secondaryButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      secondaryObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      secondaryLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      autoContinueAfter: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject root {"hint":"The panel to show and hide. Should start disabled in the scene."}'
+    - // @input Component.Text messageText
+    - // @input AssignableType_1 button
+    - '// @input SceneObject buttonObject {"hint":"Object holding the button, hidden when a message has nothing to press."}'
+    - // @input Component.Text buttonLabel
+    - "// @input AssignableType_2 secondaryButton {\"hint\":\"Optional second button, sitting above the main one — 'Watch Again'.\"}"
+    - '// @input SceneObject secondaryObject {"hint":"Object holding the second button, hidden whenever nothing is offered on it."}'
+    - // @input Component.Text secondaryLabel
+    - '// @input float autoContinueAfter {"hint":"Dev only: auto-press the button this many seconds after the panel appears, so the flow can be exercised in the preview without a hand to pinch with. 0 disables."}'

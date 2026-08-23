@@ -1,0 +1,30 @@
+# BEGIN Lens Studio managed Agents-Docs block
+.mcp.json
+.cursor/mcp.json
+.vscode/mcp.json
+.codex/config.toml
+.claude/settings.local.json
+# END Lens Studio managed Agents-Docs block
+
+# --- Signing keys: never publish these ---
+# Lens Studio generates them per project and will make new ones on a fresh
+# clone. Committing them would put the private keys that sign your Lens on
+# the public internet.
+*.pem
+signing_key.pem
+spk_debug_key.pem
+
+# --- Lens Studio generated, regenerated on open ---
+# Cache/ alone is 190 MB of the project's 207 MB and is rebuilt from Assets/.
+Cache/
+Workspaces/
+PluginsUserPreferences/
+
+# Editor lock files and the scene dump the MCP tooling writes.
+*.lock
+.virtual-scene.json
+
+# --- OS and editor junk ---
+.DS_Store
+._*
+~$*

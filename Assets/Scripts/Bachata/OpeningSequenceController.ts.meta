@@ -1,0 +1,82 @@
+- !<AssetImportMetadata/b7a55291-dd3f-4478-b9ed-b9067f714e5a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0c52a6ac-b1c6-46f9-ab14-b7b11069c41d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0c52a6ac-b1c6-46f9-ab14-b7b11069c41d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a537d153-be84-49bd-8380-f368bf617d93
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a537d153-be84-49bd-8380-f368bf617d93>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 1d73bee3-b51b-43e3-8044-c418db42951c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoStartAfter: false
+    buttonDelay: false
+    buttonFadeDuration: false
+    mainMenu: false
+    openingRoot: false
+    panelRoot: false
+    splashDistance: false
+    splashFadeDuration: false
+    splashSize: false
+    splashVisual: false
+    startButton: false
+    startButtonRoot: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - openingRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      panelRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      splashVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      startButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      startButtonRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      mainMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      splashDistance: !<float> 170.000000
+      splashSize: !<Vec2> {x: 90.000000, y: 60.000000}
+      splashFadeDuration: 1.600000
+      buttonDelay: !<float> 1.000000
+      buttonFadeDuration: 0.600000
+      autoStartAfter: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject openingRoot {"hint":"Root of the opening. Disabled once the hand-off completes."}'
+    - '// @input SceneObject panelRoot {"hint":"The panel holding the splash image and Start button."}'
+    - '// @input Component.RenderMeshVisual splashVisual {"hint":"Quad carrying the splash image."}'
+    - '// @input AssignableType_1 startButton {"hint":"Button that ends the opening."}'
+    - '// @input SceneObject startButtonRoot {"hint":"Object holding the Start button, faded in after the image lands."}'
+    - '// @input SceneObject mainMenu {"hint":"The main menu, faded in once Start is pressed."}'
+    - '// @ui {"widget":"group_start", "label":"Placement"}'
+    - '// @input float splashDistance = 170 {"hint":"Distance in front of the head where the panel sits, cm."}'
+    - '// @input vec2 splashSize = {34,23} {"hint":"Splash image size inside the panel, cm. Width then height."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Timing"}'
+    - '// @input float splashFadeDuration = 1.6 {"hint":"Seconds for the splash image to fade up."}'
+    - '// @input float buttonDelay = 0.8 {"hint":"Seconds after the image lands before the button fades in."}'
+    - // @input float buttonFadeDuration = 0.6
+    - '// @ui {"widget":"group_end"}'
+    - '// @input float autoStartAfter {"hint":"Dev only: auto-press Start this many seconds after it appears. 0 disables."}'

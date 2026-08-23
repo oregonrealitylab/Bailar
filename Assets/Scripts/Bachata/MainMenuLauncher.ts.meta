@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/ad5cb2a8-d025-4eeb-87d0-e3bc397ac508>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 63087ac6-e5b2-4f5c-8d64-ed725afcdb1f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 63087ac6-e5b2-4f5c-8d64-ed725afcdb1f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 134be32c-064c-4b16-882d-a9266880e500
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/134be32c-064c-4b16-882d-a9266880e500>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 235015bb-b8fe-439f-9c66-6bab518691f7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoOpenAfter: false
+    globe: false
+    launchButton: false
+    mainMenuPanel: false
+    menuRoot: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - launchButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      menuRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      mainMenuPanel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      globe: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      autoOpenAfter: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType_1 launchButton {"hint":"Button at the base of the globe."}'
+    - '// @input SceneObject menuRoot {"hint":"Parent holding every menu panel. Positioned in front of the globe."}'
+    - '// @input SceneObject mainMenuPanel {"hint":"First panel to open."}'
+    - // @input AssignableType_2 globe
+    - '// @input float autoOpenAfter {"hint":"Dev only: open the menu on its own after N seconds. 0 disables."}'

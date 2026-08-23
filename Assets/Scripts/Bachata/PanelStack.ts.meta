@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/544a81ef-8eab-4c0e-9671-989730b45b4e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> eac9c24d-b4be-4e1a-9fcf-d386eb695340
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> eac9c24d-b4be-4e1a-9fcf-d386eb695340
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a1a5b0b7-716a-45e7-a888-34c50545964b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a1a5b0b7-716a-45e7-a888-34c50545964b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: fe6ff476-d087-404f-98a8-68aad9b14ee2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    panels: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panels: !<reference.SceneObject[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject[] panels {"hint":"Every panel this stack manages. All are switched off at start."}'

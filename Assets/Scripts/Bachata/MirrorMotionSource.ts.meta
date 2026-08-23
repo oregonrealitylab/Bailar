@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/b4cfcf05-1c0b-4f48-929e-2c6a6578b0c3>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e2f80e9c-7b20-4e86-b5c7-12f2ce34633e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e2f80e9c-7b20-4e86-b5c7-12f2ce34633e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 06f40340-d2d4-41fc-b157-85cdc3a6898e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/06f40340-d2d4-41fc-b157-85cdc3a6898e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: 15e84d56-b722-4a26-8613-ce5e2bde16f8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bodyTracking: false
+    gain: false
+    jointName: false
+    secondJointName: false
+    trackedJoint: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - bodyTracking: !<reference.ObjectTracking3D> 00000000-0000-0000-0000-000000000000
+      trackedJoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      jointName: Left Hip
+      secondJointName: Right Hip
+      gain: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.ObjectTracking3D bodyTracking {"hint":"Object Tracking 3D component driving a Body Tracking asset."}'
+    - '// @input SceneObject trackedJoint {"hint":"Object already attached to a hip/pelvis joint in the Inspector. Leave empty to have the joints below attached at run time instead."}'
+    - '// @ui {"widget":"group_start", "label":"Joints"}'
+    - '// @input string jointName = "Left Hip" {"hint":"Attachment point used when no Tracked Joint is supplied."}'
+    - '// @input string secondJointName = "Right Hip" {"hint":"Optional second joint. Averaged with the first, which steadies the centre line."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input float gain = 0.5 {"hint":"Scales tracked offset into the metre range the step thresholds expect. A reflection sits at twice the distance to the glass, so raw offsets read large; lower this if steps register early.", "widget":"slider", "min":0.1, "max":3, "step":0.05}'

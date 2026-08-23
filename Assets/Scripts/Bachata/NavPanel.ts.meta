@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/7bc17bee-4c54-4a03-8751-f804e0d08615>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dc1c4dec-41d9-403d-a8d6-c16dffe1c24f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dc1c4dec-41d9-403d-a8d6-c16dffe1c24f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> babc64c4-c6cc-40f6-8706-dd7930fd98e6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/babc64c4-c6cc-40f6-8706-dd7930fd98e6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  ComponentUid: bfa8c808-7162-45b2-a355-664e5ca03714
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backButton: false
+    closeButton: false
+    linkButtons: false
+    linkTargets: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - closeButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      backButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      linkButtons: !<MappingBased.AssignableType_3[]>
+        []
+      linkTargets: !<reference.SceneObject[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType_1 closeButton {"hint":"Top-left button. Closes the whole menu."}'
+    - '// @input AssignableType_2 backButton {"hint":"Top-right button. Returns to the previous panel."}'
+    - '// @input AssignableType_3[] linkButtons {"hint":"Buttons on this panel that open another one, in order."}'
+    - '// @input SceneObject[] linkTargets {"hint":"Panel each link button opens, same order as Link Buttons."}'
