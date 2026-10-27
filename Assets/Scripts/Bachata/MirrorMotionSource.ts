@@ -119,3 +119,4 @@ lower this if steps register early."
     return sum.uniformScale(1 / this.joints.length)
   }
 }
+

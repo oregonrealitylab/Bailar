@@ -8,9 +8,19 @@
   ExtraData:
     {}
   AssetDataMap:
-    {}
+    Font: !<own> 1fcc7ac3-4e48-4ed8-9b96-75cdec03984a
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<FontAssetData/1fcc7ac3-4e48-4ed8-9b96-75cdec03984a>
+  VariableFontMetadata:
+    axes:
+      []
+    namedInstances:
+      []
+    defaultCoordinates:
+      []
+  CustomVariationStyles:
+    []

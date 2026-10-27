@@ -1,8 +1,9 @@
 - !<AssetImportMetadata/ce6ee539-ff20-4c7d-b65f-e9da5359b1fc>
   ImportedAssetIds:
     BinAsset: !<reference> c95ec0e5-58a1-47e7-a1f1-51924df7ed88
-  ImporterName: BinAssetImporter
-  PrimaryAsset: !<reference> c95ec0e5-58a1-47e7-a1f1-51924df7ed88
+    VectorComposite: !<reference> 51e7e294-4ec6-4519-a431-018cf7f5a6db
+  ImporterName: VectorCompositeImporter
+  PrimaryAsset: !<reference> 51e7e294-4ec6-4519-a431-018cf7f5a6db
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:

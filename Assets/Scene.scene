@@ -15,6 +15,8 @@
   RenderPreviewOutput: !<reference> 923415f5-4245-4675-ade1-6d69d6d23e71
   RenderOverlayOutput: !<reference> 00000000-0000-0000-0000-000000000000
   PhysicsRootWorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  HiddenInCaptureLayers: 0
+  HiddenInDisplayLayers: 0
   PrefabPreviewEnvironmentInitialized: false
   PrefabPreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/00000000-0000-0065-0000-000000000064>
@@ -120,6 +122,7 @@
   EnvMapRotation: 0.000000
   DiffuseEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
   SpecularEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  SpecularCubemapTexture: !<reference> 00000000-0000-0000-0000-000000000000
   Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
   DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
@@ -167,6 +170,7 @@
   EnvMapRotation: 0.000000
   DiffuseEnvTexture: !<reference> 2013a19b-93c1-4f21-b7ea-876a33550c7b
   SpecularEnvTexture: !<reference> d795fd46-e16b-4cb9-8dfb-4ef227298f7a
+  SpecularCubemapTexture: !<reference> 00000000-0000-0000-0000-000000000000
   Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
   DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
@@ -256,6 +260,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: ""
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -263,8 +268,7 @@
   SizeToFit: false
   FontSize: 90.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -281,7 +285,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -853,6 +857,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: ""
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -860,8 +865,7 @@
   SizeToFit: false
   FontSize: 56.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -878,7 +882,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -1026,6 +1030,7 @@
     Step on 1 and 3,
     close on 2, tap and pop on 4.
     Then mirror it to the right.
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -1033,8 +1038,7 @@
   SizeToFit: false
   FontSize: 82.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -1051,7 +1055,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -1364,6 +1368,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Start
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -1371,8 +1376,7 @@
   SizeToFit: false
   FontSize: 126.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -1389,7 +1393,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -1992,6 +1996,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Mambo
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -1999,8 +2004,7 @@
   SizeToFit: false
   FontSize: 92.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2017,7 +2021,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -2077,6 +2081,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Great!
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2084,8 +2089,7 @@
   SizeToFit: false
   FontSize: 92.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2102,7 +2106,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -2211,6 +2215,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Samba
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2218,8 +2223,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2236,7 +2240,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -2296,6 +2300,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Merengue
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2303,8 +2308,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2321,7 +2325,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -2426,6 +2430,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Getting started
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2433,8 +2438,7 @@
   SizeToFit: false
   FontSize: 36.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2451,7 +2455,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -2544,6 +2548,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Dance Trainer
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2551,8 +2556,7 @@
   SizeToFit: false
   FontSize: 200.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2569,7 +2573,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -2668,6 +2672,7 @@
     You change weight on every
     single count — there is no
     hold anywhere in the bar.
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2675,8 +2680,7 @@
   SizeToFit: false
   FontSize: 82.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2693,7 +2697,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -2769,6 +2773,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Body copy
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2776,8 +2781,7 @@
   SizeToFit: false
   FontSize: 24.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2794,7 +2798,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -2925,6 +2929,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Next
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2932,8 +2937,7 @@
   SizeToFit: false
   FontSize: 126.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -2950,7 +2954,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -3370,6 +3374,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: 1
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -3377,8 +3382,7 @@
   SizeToFit: false
   FontSize: 450.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3395,7 +3399,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -3542,6 +3546,7 @@
   Text: |-
     Latin 
     Dances
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -3549,8 +3554,7 @@
   SizeToFit: false
   FontSize: 50.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3567,7 +3571,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -3658,6 +3662,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Augmenting Dance Lessons
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -3665,8 +3670,7 @@
   SizeToFit: false
   FontSize: 107.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3683,7 +3687,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -3889,6 +3893,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -3896,8 +3901,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3914,7 +3918,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -3989,6 +3993,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -3996,8 +4001,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -4014,7 +4018,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -4244,6 +4248,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Merengue
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4251,8 +4256,7 @@
   SizeToFit: false
   FontSize: 230.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -4269,7 +4273,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -4459,6 +4463,7 @@
   Text: |-
     How To 
     Use Bailar
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4466,8 +4471,7 @@
   SizeToFit: false
   FontSize: 50.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -4484,7 +4488,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -4661,6 +4665,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4668,8 +4673,7 @@
   SizeToFit: false
   FontSize: 90.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -4686,7 +4690,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -4746,6 +4750,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4753,8 +4758,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -4771,7 +4775,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -4973,6 +4977,7 @@
   Text: |-
     North / Central
     America
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4980,8 +4985,7 @@
   SizeToFit: false
   FontSize: 54.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -4998,7 +5002,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -5058,6 +5062,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Settings
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -5065,8 +5070,7 @@
   SizeToFit: false
   FontSize: 50.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -5083,7 +5087,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -5159,6 +5163,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Stand still
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -5166,8 +5171,7 @@
   SizeToFit: false
   FontSize: 129.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -5184,7 +5188,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -5608,6 +5612,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Next
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -5615,8 +5620,7 @@
   SizeToFit: false
   FontSize: 126.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -5633,7 +5637,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -5807,6 +5811,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Basics you have completed
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -5814,8 +5819,7 @@
   SizeToFit: false
   FontSize: 36.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -5832,7 +5836,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -6070,6 +6074,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Main Menu
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6077,8 +6082,7 @@
   SizeToFit: false
   FontSize: 50.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -6095,7 +6099,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -6488,6 +6492,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Salsa
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6495,8 +6500,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -6513,7 +6517,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -6673,6 +6677,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6680,8 +6685,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -6698,7 +6702,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -6758,6 +6762,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Intro
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6765,8 +6770,7 @@
   SizeToFit: false
   FontSize: 230.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -6783,7 +6787,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -6912,6 +6916,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Pick a dance to read about
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6919,8 +6924,7 @@
   SizeToFit: false
   FontSize: 36.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -6937,7 +6941,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -6997,6 +7001,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Region
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -7004,8 +7009,7 @@
   SizeToFit: false
   FontSize: 26.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -7022,7 +7026,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -7127,6 +7131,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Back
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -7134,8 +7139,7 @@
   SizeToFit: false
   FontSize: 30.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -7152,7 +7156,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -7394,6 +7398,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Dance
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -7401,8 +7406,7 @@
   SizeToFit: false
   FontSize: 30.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -7419,7 +7423,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -7479,6 +7483,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Cumbia
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -7486,8 +7491,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -7504,7 +7508,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -7615,6 +7619,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: "Ready?"
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -7622,8 +7627,7 @@
   SizeToFit: false
   FontSize: 230.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -7640,7 +7644,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -7700,6 +7704,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -7707,8 +7712,7 @@
   SizeToFit: false
   FontSize: 90.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -7725,7 +7729,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -8163,6 +8167,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -8170,8 +8175,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -8188,7 +8192,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -8248,6 +8252,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -8255,8 +8260,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -8273,7 +8277,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -8454,6 +8458,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Start
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -8461,8 +8466,7 @@
   SizeToFit: false
   FontSize: 76.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -8479,7 +8483,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -9136,6 +9140,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: ""
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -9143,8 +9148,7 @@
   SizeToFit: false
   FontSize: 89.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -9161,7 +9165,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -9257,6 +9261,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -9264,8 +9269,7 @@
   SizeToFit: false
   FontSize: 90.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -9282,7 +9286,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -9526,6 +9530,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Bachata
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -9533,8 +9538,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -9551,7 +9555,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -9899,6 +9903,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -9906,8 +9911,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -9924,7 +9928,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -10534,6 +10538,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -10541,8 +10546,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -10559,7 +10563,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -10671,6 +10675,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Start
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -10678,8 +10683,7 @@
   SizeToFit: false
   FontSize: 120.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -10696,7 +10700,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -10756,6 +10760,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Latin Dances
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -10763,8 +10768,7 @@
   SizeToFit: false
   FontSize: 100.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -10781,7 +10785,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -10848,6 +10852,7 @@
     Then forward and back:
     four steps forward, then four
     steps back to where you began.
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -10855,8 +10860,7 @@
   SizeToFit: false
   FontSize: 82.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -10873,7 +10877,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -10948,6 +10952,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: "Ready?"
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -10955,8 +10960,7 @@
   SizeToFit: false
   FontSize: 230.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -10973,7 +10977,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -11063,6 +11067,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11070,8 +11075,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -11088,7 +11092,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -11148,6 +11152,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: South America
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11155,8 +11160,7 @@
   SizeToFit: false
   FontSize: 130.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -11173,7 +11177,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -11391,6 +11395,7 @@
     of floor before you start.
     You'll step side to side,
     forward and back.
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11398,8 +11403,7 @@
   SizeToFit: false
   FontSize: 74.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -11416,7 +11420,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -11676,6 +11680,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Back
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11683,8 +11688,7 @@
   SizeToFit: false
   FontSize: 30.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -11701,7 +11705,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -11761,6 +11765,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: How To Use
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11768,8 +11773,7 @@
   SizeToFit: false
   FontSize: 100.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -11786,7 +11790,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -12021,6 +12025,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Tango
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -12028,8 +12033,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -12046,7 +12050,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -12151,6 +12155,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Caribbean
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -12158,8 +12163,7 @@
   SizeToFit: false
   FontSize: 170.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -12176,7 +12180,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -12256,6 +12260,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: ""
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -12263,8 +12268,7 @@
   SizeToFit: false
   FontSize: 89.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -12281,7 +12285,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -12458,6 +12462,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Dance
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -12465,8 +12470,7 @@
   SizeToFit: false
   FontSize: 60.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -12483,7 +12487,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -12658,6 +12662,7 @@
     Stand with room either side,
     feet together.
     Hold still to calibrate.
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -12665,8 +12670,7 @@
   SizeToFit: false
   FontSize: 82.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -12683,7 +12687,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -12743,6 +12747,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -12750,8 +12755,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -12768,7 +12772,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -12912,6 +12916,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Next
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -12919,8 +12924,7 @@
   SizeToFit: false
   FontSize: 126.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -12937,7 +12941,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -13134,6 +13138,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: More info
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -13141,8 +13146,7 @@
   SizeToFit: false
   FontSize: 230.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -13159,7 +13163,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -13317,6 +13321,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Settings
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -13324,8 +13329,7 @@
   SizeToFit: false
   FontSize: 100.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -13342,7 +13346,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -13514,6 +13518,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -13521,8 +13526,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -13539,7 +13543,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -13723,6 +13727,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Cumbia
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -13730,8 +13735,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -13748,7 +13752,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -13808,6 +13812,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Caribbean
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -13815,8 +13820,7 @@
   SizeToFit: false
   FontSize: 54.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -13833,7 +13837,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -14363,6 +14367,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: "Learn about the app, key settings, and the various latin dances that define the Latin diaspora."
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -14370,8 +14375,7 @@
   SizeToFit: false
   FontSize: 45.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -14388,7 +14392,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -14448,6 +14452,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Coming soon
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -14455,8 +14460,7 @@
   SizeToFit: false
   FontSize: 74.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -14473,7 +14477,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -14552,6 +14556,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Next
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -14559,8 +14564,7 @@
   SizeToFit: false
   FontSize: 126.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -14577,7 +14581,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -14639,6 +14643,7 @@
   Text: |-
     North / Central
     America
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -14646,8 +14651,7 @@
   SizeToFit: false
   FontSize: 88.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -14664,7 +14668,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -14724,6 +14728,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: ""
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -14731,8 +14736,7 @@
   SizeToFit: false
   FontSize: 56.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -14749,7 +14753,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -14902,6 +14906,7 @@
     Bachata's side basic is
     four counts to the left,
     then four to the right.
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -14909,8 +14914,7 @@
   SizeToFit: false
   FontSize: 82.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -14927,7 +14931,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -14987,6 +14991,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Watch Again
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -14994,8 +14999,7 @@
   SizeToFit: false
   FontSize: 76.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -15012,7 +15016,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -15141,6 +15145,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Pick a dance
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -15148,8 +15153,7 @@
   SizeToFit: false
   FontSize: 60.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -15166,7 +15170,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -15274,6 +15278,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Start
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -15281,8 +15286,7 @@
   SizeToFit: false
   FontSize: 126.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -15299,7 +15303,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -15581,6 +15585,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Start
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -15588,8 +15593,7 @@
   SizeToFit: false
   FontSize: 76.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -15606,7 +15610,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -16031,6 +16035,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -16038,8 +16043,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -16056,7 +16060,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -16263,6 +16267,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Options
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -16270,8 +16275,7 @@
   SizeToFit: false
   FontSize: 36.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -16288,7 +16292,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -16401,6 +16405,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Dance Floor
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -16408,8 +16413,7 @@
   SizeToFit: false
   FontSize: 220.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -16426,7 +16430,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -16676,6 +16680,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Coming soon
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -16683,8 +16688,7 @@
   SizeToFit: false
   FontSize: 74.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -16701,7 +16705,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -17038,6 +17042,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: South America
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17045,8 +17050,7 @@
   SizeToFit: false
   FontSize: 54.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -17063,7 +17067,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -17153,6 +17157,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Corrido
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17160,8 +17165,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -17178,7 +17182,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -17238,6 +17242,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: 1
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17245,8 +17250,7 @@
   SizeToFit: false
   FontSize: 450.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -17263,7 +17267,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -17323,6 +17327,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Stand still
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17330,8 +17335,7 @@
   SizeToFit: false
   FontSize: 129.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -17348,7 +17352,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -17554,6 +17558,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Merengue
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17561,8 +17566,7 @@
   SizeToFit: false
   FontSize: 92.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -17579,7 +17583,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -17779,6 +17783,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17786,8 +17791,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -17804,7 +17808,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -18016,6 +18020,7 @@
   Text: |-
     Progress
     Tracker
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -18023,8 +18028,7 @@
   SizeToFit: false
   FontSize: 50.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -18041,7 +18045,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -18339,6 +18343,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Tipico
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -18346,8 +18351,7 @@
   SizeToFit: false
   FontSize: 92.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -18364,7 +18368,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -18675,6 +18679,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Bachata
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -18682,8 +18687,7 @@
   SizeToFit: false
   FontSize: 92.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -18700,7 +18704,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -19152,6 +19156,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Main Menu
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -19159,8 +19164,7 @@
   SizeToFit: false
   FontSize: 100.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -19177,7 +19181,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -19600,6 +19604,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: ""
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -19607,8 +19612,7 @@
   SizeToFit: false
   FontSize: 90.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -19625,7 +19629,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -19737,6 +19741,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Mirror Mode
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -19744,8 +19749,7 @@
   SizeToFit: false
   FontSize: 34.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -19762,7 +19766,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -19909,6 +19913,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Dance
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -19916,8 +19921,7 @@
   SizeToFit: false
   FontSize: 30.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -19934,7 +19938,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -20197,6 +20201,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Tracker
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -20204,8 +20209,7 @@
   SizeToFit: false
   FontSize: 100.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -20222,7 +20226,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -20416,6 +20420,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Back
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -20423,8 +20428,7 @@
   SizeToFit: false
   FontSize: 35.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -20441,7 +20445,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -20626,6 +20630,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Mambo
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -20633,8 +20638,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -20651,7 +20655,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -20711,6 +20715,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Tamborito
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -20718,8 +20723,7 @@
   SizeToFit: false
   FontSize: 38.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -20736,7 +20740,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -20796,6 +20800,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Back
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -20803,8 +20808,7 @@
   SizeToFit: false
   FontSize: 30.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -20821,7 +20825,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -21021,6 +21025,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Punta
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -21028,8 +21033,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -21046,7 +21050,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -21136,6 +21140,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Body copy
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -21143,8 +21148,7 @@
   SizeToFit: false
   FontSize: 30.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -21161,7 +21165,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -21435,6 +21439,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: The march
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -21442,8 +21447,7 @@
   SizeToFit: false
   FontSize: 230.000000
   FontSource: !<reference> f59951da-21b7-4f33-ba47-569df19cb7df
-  FontWeight: 400
-  Italic: false
+  PreferredStyle: Regular
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -21460,7 +21464,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -21640,6 +21644,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -21647,8 +21652,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -21665,7 +21669,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -22014,6 +22018,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Pinch to Set
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -22021,8 +22026,7 @@
   SizeToFit: false
   FontSize: 110.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -22039,7 +22043,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -22148,6 +22152,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Back
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -22155,8 +22160,7 @@
   SizeToFit: false
   FontSize: 30.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -22173,7 +22177,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -22304,6 +22308,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Watch Again
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -22311,8 +22316,7 @@
   SizeToFit: false
   FontSize: 76.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -22329,7 +22333,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -22430,6 +22434,7 @@
     Stand with room all round,
     feet together. Hold still
     to calibrate.
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -22437,8 +22442,7 @@
   SizeToFit: false
   FontSize: 82.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -22455,7 +22459,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -22532,6 +22536,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Back
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -22539,8 +22544,7 @@
   SizeToFit: false
   FontSize: 30.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -22557,7 +22561,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -23059,6 +23063,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Great!
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -23066,8 +23071,7 @@
   SizeToFit: false
   FontSize: 92.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -23084,7 +23088,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -23189,6 +23193,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -23196,8 +23201,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -23214,7 +23218,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -23439,6 +23443,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: X
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -23446,8 +23451,7 @@
   SizeToFit: false
   FontSize: 52.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -23464,7 +23468,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -23557,6 +23561,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Salsa
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -23564,8 +23569,7 @@
   SizeToFit: false
   FontSize: 46.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -23582,7 +23586,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -23642,6 +23646,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Off
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -23649,8 +23654,7 @@
   SizeToFit: false
   FontSize: 24.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -23667,7 +23671,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
@@ -23888,6 +23892,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: Look at the floor in front of you
+  CustomMaterial: !<reference> 00000000-0000-0000-0000-000000000000
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -23895,8 +23900,7 @@
   SizeToFit: false
   FontSize: 44.000000
   FontSource: !<reference> ed7a72d9-7897-41c2-afb1-bea72672bd5c
-  FontWeight: 700
-  Italic: false
+  PreferredStyle: Bold
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -23913,7 +23917,7 @@
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
-  BlendMode: PremultipliedAlpha
+  BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
