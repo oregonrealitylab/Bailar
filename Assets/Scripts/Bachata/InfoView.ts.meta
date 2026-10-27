@@ -28,13 +28,12 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    bodyHeight: false
-    bodyScroll: false
     bodyText: false
-    bodyWidth: false
+    charsPerLine: false
     image: false
     placeholderImage: false
-    usePlaceholderText: false
+    slider: false
+    visibleLines: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -45,20 +44,20 @@
     []
   DefaultScriptInputs:
     - bodyText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      bodyScroll: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      slider: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       image: !<reference.Image> 00000000-0000-0000-0000-000000000000
       placeholderImage: !<reference.Texture> 00000000-0000-0000-0000-000000000000
-      bodyWidth: !<float> 24.000000
-      bodyHeight: !<float> 60.000000
-      usePlaceholderText: true
+      charsPerLine: !<float> 46.000000
+      visibleLines: !<float> 9.000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - '// @input Component.Text bodyText {"hint":"Body copy. Replace the placeholder once the real writing exists."}'
-    - '// @input AssignableType_1 bodyScroll {"hint":"Scroll window wrapping the body text."}'
-    - '// @input Component.Image image {"hint":"Picture between the title and the body copy."}'
+    - '// @input Component.Text bodyText {"hint":"The instructions. Only the lines that fit are drawn at any one time."}'
+    - '// @input AssignableType_1 slider {"hint":"Scrollbar for the instructions. Rotated 90 on Z so it reads as vertical."}'
+    - '// @input Component.Image image {"hint":"Picture between the title and the instructions."}'
     - '// @input Asset.Texture placeholderImage {"hint":"Shown until a real picture is dropped in."}'
-    - '// @input float bodyWidth = 24 {"hint":"Width of the scrollable body area, cm."}'
-    - '// @input float bodyHeight = 60 {"hint":"Rough height of the body, cm. Sets how far it scrolls."}'
-    - '// @input bool usePlaceholderText = true {"hint":"Fill the body with placeholder copy at start-up. Turn off once real text is authored."}'
+    - '// @ui {"widget":"group_start", "label":"Body layout"}'
+    - '// @input float charsPerLine = 46 {"hint":"Characters per line to wrap at. Lower this if the text runs past the edge of the panel; raise it if the lines look short."}'
+    - '// @input float visibleLines = 9 {"hint":"How many lines are on screen at once."}'
+    - '// @ui {"widget":"group_end"}'

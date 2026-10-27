@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="512" viewBox="0 0 256 512">
+  <!-- Footprint guide, right foot, toes up. Violet heel to blue toes: the UI's
+       sweep pushed brighter, because the display is additive and dark tones
+       barely show against a real floor. -->
+  <defs>
+    <linearGradient id="sweep" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#B07CFF"/>
+      <stop offset="55%" stop-color="#7C8CFF"/>
+      <stop offset="100%" stop-color="#4FB8FF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <g transform="translate(256,0) scale(-1,1)">
+    <g fill="url(#sweep)" opacity="0.55" filter="url(#glow)">
+      <path d="M128 500 C70 500 62 440 66 400 C70 340 56 290 52 230 C48 170 90 140 140 140 C196 140 214 175 210 220 C206 270 176 300 174 350 C172 400 196 430 190 460 C184 492 160 500 128 500 Z"/>
+      <ellipse cx="182" cy="92" rx="30" ry="38"/>
+      <ellipse cx="132" cy="72" rx="19" ry="24"/>
+      <ellipse cx="96" cy="82" rx="16" ry="20"/>
+      <ellipse cx="68" cy="102" rx="14" ry="17"/>
+      <ellipse cx="46" cy="130" rx="12" ry="14"/>
+    </g>
+    <g fill="url(#sweep)">
+      <path d="M128 500 C70 500 62 440 66 400 C70 340 56 290 52 230 C48 170 90 140 140 140 C196 140 214 175 210 220 C206 270 176 300 174 350 C172 400 196 430 190 460 C184 492 160 500 128 500 Z"/>
+      <ellipse cx="182" cy="92" rx="30" ry="38"/>
+      <ellipse cx="132" cy="72" rx="19" ry="24"/>
+      <ellipse cx="96" cy="82" rx="16" ry="20"/>
+      <ellipse cx="68" cy="102" rx="14" ry="17"/>
+      <ellipse cx="46" cy="130" rx="12" ry="14"/>
+    </g>
+  </g>
+</svg>

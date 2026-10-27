@@ -159,6 +159,13 @@ so the flow can be exercised in the preview without a hand to pinch with. \
     }
   }
 
+  /** Turn the panel to match another — used so the exit prompt faces the same way as the panel it covers. */
+  public setWorldRotation(rotation: quat): void {
+    if (this.root) {
+      this.root.getTransform().setWorldRotation(rotation)
+    }
+  }
+
   private handleContinue(): void {
     const callback = this.onContinue
     this.onContinue = null

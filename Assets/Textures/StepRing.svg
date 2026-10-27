@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- White so it can be tinted: the on-mark ring, landing ripples and grade flashes all share it. -->
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#ffffff" stroke-width="18" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#ffffff" stroke-width="9"/>
+</svg>

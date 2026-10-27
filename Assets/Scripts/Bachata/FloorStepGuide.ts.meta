@@ -1,0 +1,116 @@
+- !<AssetImportMetadata/f3fb1d14-967d-4fdc-8177-35d0ee002ce9>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 636c5197-85ae-456e-be80-6d12a97efaef
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 636c5197-85ae-456e-be80-6d12a97efaef
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5cbb7894-05aa-47be-9a6f-856168460580
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5cbb7894-05aa-47be-9a6f-856168460580>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: b5f56572-389e-4d75-854f-e9eb3ed6ffbe
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accuracyHold: false
+    activeAlpha: false
+    eyeHeight: false
+    floorLift: false
+    floorRoot: false
+    footLength: false
+    forwardOffset: false
+    ghostAlpha: false
+    leftFootTexture: false
+    liftHeight: false
+    markTolerance: false
+    material: false
+    offMarkColor: false
+    onMarkColor: false
+    planeMesh: false
+    restingAlpha: false
+    rightFootTexture: false
+    ringTexture: false
+    rippleColor: false
+    rippleDuration: false
+    stanceWidth: false
+    stride: false
+    travelFraction: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - planeMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      leftFootTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      rightFootTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      ringTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      floorRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      eyeHeight: !<float> 155.000000
+      floorLift: !<float> 1.000000
+      stride: !<float> 28.000000
+      stanceWidth: !<float> 16.000000
+      footLength: !<float> 26.000000
+      forwardOffset: !<float> 0.000000
+      activeAlpha: 0.900000
+      restingAlpha: 0.450000
+      ghostAlpha: 0.220000
+      liftHeight: !<float> 3.000000
+      travelFraction: 0.550000
+      rippleDuration: 0.600000
+      rippleColor: !<Vec4> {x: 0.550000, y: 0.600000, z: 1.000000, w: 1.000000}
+      onMarkColor: !<Vec4> {x: 0.350000, y: 0.700000, z: 1.000000, w: 1.000000}
+      offMarkColor: !<Vec4> {x: 1.000000, y: 0.700000, z: 0.250000, w: 1.000000}
+      markTolerance: 0.600000
+      accuracyHold: 0.900000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.RenderMesh planeMesh {"hint":"Flat plane mesh lying in XZ, normal +Y. Used for every print and ring."}'
+    - '// @input Asset.Material material {"hint":"Transparent unlit material with Base Texture and Base Color. Cloned per piece."}'
+    - // @input Asset.Texture leftFootTexture
+    - // @input Asset.Texture rightFootTexture
+    - '// @input Asset.Texture ringTexture {"hint":"White ring, tinted at run time. Used for the on-mark ring and the landing ripples."}'
+    - '// @input SceneObject floorRoot {"hint":"The dance floor plate laid at the start. Its height is the floor. Without it the floor is taken to be Eye Height below the head."}'
+    - '// @ui {"widget":"group_start", "label":"Layout"}'
+    - '// @input float eyeHeight = 155 {"hint":"Used when there is no floor plate: how far below the head the floor is, cm."}'
+    - '// @input float floorLift = 1 {"hint":"Lift off the floor so the prints never z-fight with it, cm."}'
+    - '// @input float stride = 28 {"hint":"How far one step travels, cm. The trainer accepts 15-45."}'
+    - '// @input float stanceWidth = 16 {"hint":"Centre-to-centre gap between the feet when they are together, cm."}'
+    - '// @input float footLength = 26 {"hint":"Length of a print, cm."}'
+    - "// @input float forwardOffset {\"hint\":\"Shift the whole guide forward of the dancer's feet, cm. 0 puts the prints right under them.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Look"}'
+    - '// @input float activeAlpha = 0.9 {"hint":"Opacity of the foot that just moved, or is about to.", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float restingAlpha = 0.45 {"hint":"Opacity of the foot that is standing still.", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float ghostAlpha = 0.22 {"hint":"Opacity of the ghost that marks where the next move lands.", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float liftHeight = 3 {"hint":"How high a foot lifts while it travels, cm."}'
+    - '// @input float travelFraction = 0.55 {"hint":"Share of a beat spent travelling. Matches the orb so both land together.", "widget":"slider", "min":0.2, "max":1, "step":0.05}'
+    - '// @input float rippleDuration = 0.6 {"hint":"Seconds a landing ripple takes to spread and fade."}'
+    - '// @input vec4 rippleColor = {0.55,0.6,1,1} {"widget":"color"}'
+    - '// @input vec4 onMarkColor = {0.35,0.7,1,1} {"hint":"On-mark ring colour while the dancer is where the pattern expects.", "widget":"color"}'
+    - '// @input vec4 offMarkColor = {1,0.7,0.25,1} {"hint":"On-mark ring colour once the dancer has drifted off the pattern.", "widget":"color"}'
+    - '// @input float markTolerance = 0.6 {"hint":"How far from where the pattern expects still counts as on the mark, as a share of a stride.", "widget":"slider", "min":0.2, "max":1.5, "step":0.05}'
+    - "// @input float accuracyHold = 0.9 {\"hint\":\"Seconds a step's grade colour is held on the ring and the print.\"}"
+    - '// @ui {"widget":"group_end"}'

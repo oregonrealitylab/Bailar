@@ -10,6 +10,10 @@ import {Settings} from "./Settings"
 import {CoachDisplay, VERDICT_AMBER, VERDICT_GREEN, VERDICT_NEUTRAL, VERDICT_RED} from "./CoachDisplay"
 import {StagePrompt} from "./StagePrompt"
 import {StepGuideOrb} from "./StepGuideOrb"
+import {FloorStepGuide} from "./FloorStepGuide"
+
+/** The calls the orb and the floor guide both take, so the trainer drives them as one. */
+type StepGuide = Pick<StepGuideOrb, "show" | "setStage" | "setMirrored" | "onCount" | "setAccuracy" | "place">
 
 /** Counts in one bar of the 8-count these routines are written against. */
 const COUNTS_PER_BAR = 8
@@ -182,6 +186,11 @@ routine always reads head travel, whatever the setting says."
   private orb: StepGuideOrb
 
   @input
+  @allowUndefined
+  @hint("Footprints on the floor that show which foot moves on each count. Optional.")
+  private floorGuide: FloorStepGuide
+
+  @input
   @hint(
     "Which catalogue entry this routine teaches. Picks the routine out of \
 Routines.ts and is the key progress is recorded under."
@@ -289,6 +298,18 @@ steps score a beat late."
     return this.stage.axis === Axis.Lateral ? this.tracker.sagittal : this.tracker.lateral
   }
 
+  /** The orb and the floor guide, whichever of them are wired up. */
+  private get guides(): StepGuide[] {
+    const guides: StepGuide[] = []
+    if (this.orb) {
+      guides.push(this.orb)
+    }
+    if (this.floorGuide) {
+      guides.push(this.floorGuide)
+    }
+    return guides
+  }
+
   onAwake(): void {
     this.camera = WorldCameraFinderProvider.getInstance()
     this.clock = new BeatClock(this.bpm, this.beatsPerLoop, this.latencyOffset)
@@ -313,8 +334,8 @@ steps score a beat late."
    */
   public abort(): void {
     this.state = TrainerState.Idle
-    if (this.orb) {
-      this.orb.show(false)
+    for (const guide of this.guides) {
+      guide.show(false)
     }
     // Reachable before the trainer has ever been enabled — the exit button on
     // the onboarding slides can fire while this object is still switched off,
@@ -410,12 +431,15 @@ steps score a beat late."
     this.lastLoopIndex = 0
     this.startMusic()
 
-    if (this.orb) {
-      this.orb.show(true)
+    for (const guide of this.guides) {
+      guide.show(true)
       // Back to the middle before it starts: a demonstration that begins from
       // wherever the last stage left the orb reads as part of the old pattern.
-      this.orb.setStage(this.stage)
-      this.orb.setMirrored(false)
+      guide.setStage(this.stage)
+      guide.setMirrored(false)
+    }
+    if (this.floorGuide) {
+      this.floorGuide.setAssessing(false)
     }
 
     this.display.setStage(this.stageLabel())
@@ -436,8 +460,8 @@ steps score a beat late."
     this.stopMusic()
     this.display.setCount("")
 
-    if (this.orb) {
-      this.orb.show(false)
+    for (const guide of this.guides) {
+      guide.show(false)
     }
 
     if (!this.stagePrompt) {
@@ -501,11 +525,15 @@ steps score a beat late."
 
   private enterActive(): void {
     this.state = TrainerState.Active
-    if (this.orb) {
-      this.orb.show(true)
+    for (const guide of this.guides) {
+      guide.show(true)
       // Whatever the demonstration was doing, grading follows the routine as
       // written.
-      this.orb.setMirrored(false)
+      guide.setMirrored(false)
+    }
+    if (this.floorGuide) {
+      // Only now is there anything to be on or off the mark of.
+      this.floorGuide.setAssessing(true)
     }
     // Nothing measured yet to judge the opening count against.
     this.axisHistory = []
@@ -713,14 +741,18 @@ steps score a beat late."
       // Alternate demonstration bars run mirrored, so the basic is shown to
       // both sides. Decided on the 1, because it has to be in place before the
       // first step of the bar is handed to the orb.
-      if (this.orb && count === 1) {
+      if (count === 1) {
         const bar = Math.floor((sinceStart - this.demoLeadCounts) / COUNTS_PER_BAR)
-        this.orb.setMirrored(this.mirrorAlternateBars && bar % 2 === 1)
+        for (const guide of this.guides) {
+          guide.setMirrored(this.mirrorAlternateBars && bar % 2 === 1)
+        }
       }
     }
 
-    if (this.orb && (this.state === TrainerState.Active || this.state === TrainerState.Demo)) {
-      this.orb.onCount(count, this.stage, this.clock.beatPeriod, now)
+    if (this.state === TrainerState.Active || this.state === TrainerState.Demo) {
+      for (const guide of this.guides) {
+        guide.onCount(count, this.stage, this.clock.beatPeriod, now)
+      }
     }
 
     if (this.state === TrainerState.Active && this.stage.grading === Grading.Beat) {
@@ -955,8 +987,8 @@ steps score a beat late."
   private reportGrade(text: string, color: vec4): void {
     this.display.setVerdict(text, color)
     this.display.flash(color)
-    if (this.orb) {
-      this.orb.setAccuracy(color)
+    for (const guide of this.guides) {
+      guide.setAccuracy(color)
     }
   }
 
@@ -994,15 +1026,15 @@ steps score a beat late."
     if (this.stage.mirroredRepeat && !this.mirroredBar) {
       // Half done: same pattern, other way round.
       this.mirroredBar = true
-      if (this.orb) {
-        this.orb.setMirrored(true)
+      for (const guide of this.guides) {
+        guide.setMirrored(true)
       }
       this.promptNextStep()
       return false
     }
     this.mirroredBar = false
-    if (this.orb) {
-      this.orb.setMirrored(false)
+    for (const guide of this.guides) {
+      guide.setMirrored(false)
     }
     this.completeSet()
     return true
@@ -1101,8 +1133,8 @@ steps score a beat late."
     this.clock.stop()
     this.stopMusic()
     this.showCoachPanel(false)
-    if (this.orb) {
-      this.orb.show(false)
+    for (const guide of this.guides) {
+      guide.show(false)
     }
 
     const message = this.stage.completeMessage
@@ -1162,8 +1194,8 @@ steps score a beat late."
     // The next stage travels along a different axis, and the orb has no other
     // way to learn that — without this it keeps sliding side to side through
     // the forward-and-back basic.
-    if (this.orb) {
-      this.orb.setStage(this.stage)
+    for (const guide of this.guides) {
+      guide.setStage(this.stage)
     }
 
     // The dancer is standing still having just pressed a button, so re-anchor
@@ -1274,9 +1306,9 @@ steps score a beat late."
     }
     // The orb is anchored on the same beat as the panel but stands much closer,
     // so it carries its own distance rather than sharing the panel's.
-    if (this.orb) {
-      this.orb.place(this.camera.getWorldPosition(), this.camera.getTransform().back)
-      this.orb.setStage(this.stage)
+    for (const guide of this.guides) {
+      guide.place(this.camera.getWorldPosition(), this.camera.getTransform().back)
+      guide.setStage(this.stage)
     }
   }
 

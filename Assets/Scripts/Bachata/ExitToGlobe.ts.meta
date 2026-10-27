@@ -33,6 +33,12 @@
     globe: false
     globeScreen: false
     mainMenu: false
+    menuLabel: false
+    onboardings: false
+    prompt: false
+    promptLift: false
+    promptMessage: false
+    restartLabel: false
     trainers: false
     tutorialRoots: false
   ScriptTypesHidden:
@@ -53,6 +59,13 @@
         []
       globe: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
       mainMenu: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      onboardings: !<MappingBased.AssignableType_5[]>
+        []
+      prompt: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      promptMessage: "Leave this dance?"
+      restartLabel: Restart
+      menuLabel: Main Menu
+      promptLift: !<float> 8.000000
       autoExitAfter: !<float> 0.000000
   ScriptTypes:
     -
@@ -64,4 +77,12 @@
     - "// @input AssignableType_2[] trainers {\"hint\":\"Every dance's trainer. All are torn down on the way out — only one is ever running — and each is watched for its lesson being completed.\"}"
     - '// @input AssignableType_3 globe {"hint":"The globe, so its orbs come back instead of it reappearing mid-selection."}'
     - '// @input AssignableType_4 mainMenu {"hint":"Main menu, raised automatically when a lesson is finished rather than merely abandoned — a dancer who just completed one is most likely going straight to the Tracker or the next dance."}'
-    - '// @input float autoExitAfter {"hint":"Dev only: leave on its own this many seconds after the tutorial opens. 0 disables."}'
+    - "// @input AssignableType_5[] onboardings {\"hint\":\"Each dance's onboarding deck, same order as Trainers. Restart reopens the one belonging to whichever dance is running.\"}"
+    - '// @ui {"widget":"group_start", "label":"Exit prompt"}'
+    - '// @input AssignableType_6 prompt {"hint":"Panel raised by X. Leave empty to have X go straight back to the globe."}'
+    - '// @input string promptMessage = "Leave this dance?"'
+    - '// @input string restartLabel = "Restart"'
+    - '// @input string menuLabel = "Main Menu"'
+    - '// @input float promptLift = 8 {"hint":"How far the prompt sits in front of the panel it covers, toward the viewer, cm."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input float autoExitAfter {"hint":"Dev only: press X on its own this many seconds after the tutorial opens. 0 disables."}'

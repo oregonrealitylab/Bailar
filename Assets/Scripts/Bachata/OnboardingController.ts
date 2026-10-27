@@ -47,7 +47,8 @@ be exercised in the preview without a hand to pinch with. 0 disables."
 
   private camera: WorldCameraFinderProvider
   private index: number = -1
-  private started: boolean = false
+  private wired: boolean = false
+  private open: boolean = false
   private finishing: boolean = false
 
   onAwake(): void {
@@ -55,19 +56,38 @@ be exercised in the preview without a hand to pinch with. 0 disables."
     // The splash enables this object, so start from whichever fires first.
     this.createEvent("OnStartEvent").bind(() => this.begin())
     this.createEvent("OnEnableEvent").bind(() => this.begin())
+    // Switched off on the way into the trainer, or by the exit route. Either
+    // way the next visit — a Restart, or picking the dance again from the
+    // globe — has to start back at the first slide rather than wherever the
+    // deck was left.
+    this.createEvent("OnDisableEvent").bind(() => (this.open = false))
   }
 
   private begin(): void {
     // OnEnable can beat OnAwake, so bail until the camera reference exists.
-    if (this.started || !this.camera) {
+    // Guarded on `open` because OnStart and OnEnable can both fire for the
+    // same visit.
+    if (this.open || !this.camera) {
       return
     }
-    this.started = true
+    this.open = true
+    this.wire()
 
+    this.finishing = false
     if (this.experienceRoot) {
       this.experienceRoot.enabled = false
     }
     this.placeInFrontOfHead()
+
+    this.show(0)
+    this.fadeInSlide(0)
+  }
+
+  private wire(): void {
+    if (this.wired) {
+      return
+    }
+    this.wired = true
 
     for (let i = 0; i < this.buttons.length; i++) {
       const button = this.buttons[i]
@@ -80,9 +100,6 @@ be exercised in the preview without a hand to pinch with. 0 disables."
       UISoundService.attach(button)
       button.onTriggerUp.add(() => this.onSlideAdvanced(slideIndex))
     }
-
-    this.show(0)
-    this.fadeInSlide(0)
   }
 
   /**
