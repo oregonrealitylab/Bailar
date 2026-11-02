@@ -39,6 +39,7 @@
     demoLeadCounts: false
     demoPrompt: false
     display: false
+    floorGuide: false
     followAmount: false
     followLag: false
     latencyOffset: false
@@ -94,6 +95,7 @@
       followLag: 0.350000
       mirrorSource: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
       orb: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      floorGuide: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
       danceName: Bachata
       completeButtonText: Complete Lesson
       beatSampleLag: 0.250000
@@ -142,6 +144,7 @@
     - '// @ui {"widget":"group_end"}'
     - '// @input AssignableType_3 mirrorSource {"hint":"Body tracker used when Mirror Mode is on in Settings. Leave empty and the routine always reads head travel, whatever the setting says."}'
     - '// @input AssignableType_4 orb {"hint":"Guide orb that dances the step ahead of the dancer. Optional."}'
+    - '// @input AssignableType_5 floorGuide {"hint":"Footprints on the floor that show which foot moves on each count. Optional."}'
     - '// @input string danceName = "Bachata" {"hint":"Which catalogue entry this routine teaches. Picks the routine out of Routines.ts and is the key progress is recorded under."}'
     - '// @input string completeButtonText = "Complete Lesson" {"hint":"Label on the button that closes out a finished lesson."}'
     - "// @input float beatSampleLag = 0.25 {\"hint\":\"Beat-graded stages only. How far past the count, in beats, the step's window is measured. Dancers do not stop dead on the beat, so a window that ends exactly on it straddles the turnaround and reads a reversal as no movement at all. Raise it if changes of direction are missed, lower it if steps score a beat late.\", \"widget\":\"slider\", \"min\":0, \"max\":0.5, \"step\":0.05}"

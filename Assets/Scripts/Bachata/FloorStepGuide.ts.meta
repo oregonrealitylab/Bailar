@@ -38,6 +38,7 @@
     ghostAlpha: false
     leftFootTexture: false
     liftHeight: false
+    marchStride: false
     markTolerance: false
     material: false
     offMarkColor: false
@@ -69,6 +70,7 @@
       eyeHeight: !<float> 155.000000
       floorLift: !<float> 1.000000
       stride: !<float> 28.000000
+      marchStride: !<float> 18.000000
       stanceWidth: !<float> 16.000000
       footLength: !<float> 26.000000
       forwardOffset: !<float> 0.000000
@@ -97,6 +99,7 @@
     - '// @input float eyeHeight = 155 {"hint":"Used when there is no floor plate: how far below the head the floor is, cm."}'
     - '// @input float floorLift = 1 {"hint":"Lift off the floor so the prints never z-fight with it, cm."}'
     - '// @input float stride = 28 {"hint":"How far one step travels, cm. The trainer accepts 15-45."}'
+    - '// @input float marchStride = 18 {"hint":"Stride for a march, where every count is a step and each is smaller, cm."}'
     - '// @input float stanceWidth = 16 {"hint":"Centre-to-centre gap between the feet when they are together, cm."}'
     - '// @input float footLength = 26 {"hint":"Length of a print, cm."}'
     - "// @input float forwardOffset {\"hint\":\"Shift the whole guide forward of the dancer's feet, cm. 0 puts the prints right under them.\"}"
